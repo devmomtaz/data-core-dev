@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Learn step-by-step SQL Server migration best practices to modernize legacy enterprise databases without data loss or business disruption." />
+    <title>SQL Server Migration Best Practices for Legacy Data | DataCore Systems</title>
+
+<!-- Favicon Integration final Sep 8 -->
+<link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+<link rel="canonical" href="https://data-core.dev/blogs/bg6" />
+
+    <!-- Open Graph / Facebook Link Preview Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="SQL Server Migration Best Practices for Legacy Data | DataCore Systems" />
+    <meta property="og:description" content="Discover proven SQL Server migration strategies to move legacy database structures to modern web backends with zero downtime or data loss." />
+    <meta property="og:image" content="https://data-core.dev/images/blogs/bg6.png" />
+    <meta property="og:url" content="https://data-core.dev/blogs/bg6" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://data-core.dev/blogs/bg6" />
+    <meta name="twitter:title" content="SSQL Server Migration Best Practices for Legacy Data | DataCore Systems" />
+    <meta name="twitter:description" content="Discover proven SQL Server migration strategies to move legacy database structures to modern web backends with zero downtime or data loss." />
+    <meta name="twitter:image" content="https://data-core.dev/images/blogs/bg6.png" />
+
+    <!-- JSON-LD TechArticle Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "SQL Server Migration Best Practices for Legacy Data | DataCore Systems",
+      "description": "Discover proven SQL Server migration strategies to move legacy database structures to modern web backends with zero downtime or data loss.",
+      "image": "https://data-core.dev/images/blogs/bg6.png",
+      "author": {
+        "@type": "Person",
+        "name": "Momtaz U"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DataCore Systems",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://data-core.dev/favicon-v2.png"
+        }
+      },
+      "datePublished": "2026-08-26",
+      "mainEntityOfPage": "https://data-core.dev/blogs/bg6"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon-32.ico">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { bg: '#0b0f17', card: '#111827', border: '#1f2937' }
+                    }
+                }
+            }
+        }
+    </script>
+	
+</head>
+
+
+<body class="bg-brand-bg text-slate-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="py-6 px-6 border-b border-brand-border">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="/#blog" class="text-white text-sm font-bold flex items-center gap-2 hover:text-emerald-400 transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span class="text-xs font-mono text-slate-500">Published: Aug 26, 2026</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="py-12 px-6 flex-1">
+        <article class="max-w-4xl mx-auto bg-brand-card rounded-2xl border border-brand-border p-8">
+            
+            <!-- Category Header -->
+            <div class="pb-6 mb-6 border-b border-brand-border flex items-center justify-between">
+                <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Database Architecture &amp; Migration</span>
+                <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded">By Momtaz U</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                SQL Server Migration Best Practices: Strategies for Transferring Legacy Data Structures into Modern Web Application Backends Without Data Loss
+            </h1>
+
+            <!-- Introduction Paragraph (3 Complete Sentences) -->
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                Enterprise systems built on legacy desktop databases (such as Microsoft Access, SQL Server 2008/2012, or local-first file stores) carry decades of mission-critical business intelligence. Migrating these deep-seated schemas to modern web backends without risking data loss, downtime, or corrupting key relations is one of enterprise IT's toughest challenges. At <strong class="text-white">DataCore Systems</strong>, we utilize rigorous ETL (Extract, Transform, Load) protocols and phased staging pipelines to ensure smooth transitions from legacy data stores into modern web application engines.
+            </p>
+
+            <!-- Featured Blog Image (Placed directly after Intro Paragraph) -->
+            <div class="mb-8 rounded-xl overflow-hidden border border-brand-border bg-slate-900">
+                <img src="../images/blogs/bg6.png" alt="SQL Server Migration Best Practices" class="w-full h-auto object-cover block" />
+            </div>
+
+            <!-- Key Pillar 1 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">01.</span> Comprehensive Schema Mapping &amp; Data Type Alignment
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed mb-4">
+                    Legacy databases often rely on deprecated data types (such as <code class="text-sky-400 font-mono">text</code>, <code class="text-sky-400 font-mono">image</code>, or unconstrained strings) that do not map directly to modern web backends like SQL Server 2022, PostgreSQL, or web APIs.
+                </p>
+                <ul class="space-y-3 pl-1">
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Data Type Normalization:</strong> Converting legacy types to standard modern representations (<code class="text-sky-400 font-mono">VARCHAR(MAX)</code>, <code class="text-sky-400 font-mono">VARBINARY(MAX)</code>, or <code class="text-sky-400 font-mono">DATETIME2</code>) prevents truncation and timezone conversion bugs.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Foreign Key Preservation:</strong> Auditing and reconstructing implicit relational constraints that were previously managed at the application UI level rather than the database level.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Nullability &amp; Default Audits:</strong> Identifying orphaned records and missing default values before executing migration scripts to maintain referential integrity.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Key Pillar 2 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">02.</span> Staged ETL Pipelines &amp; Dual-Write Verification
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed mb-4">
+                    A direct "big bang" cutover presents significant operational risk. Establishing an intermediate staging environment allows for non-destructive data validation and continuous dual-writing during live transition periods.
+                </p>
+                <ul class="space-y-3 pl-1">
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Isolated Staging Environment:</strong> Extracting data into a dedicated sandbox database where transformation scripts run and report validation errors safely.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Incremental CDC (Change Data Capture):</strong> Tracking ongoing modifications in the legacy system so that delta updates stream continuously to the web backend prior to cutover.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Automated Checksum Validation:</strong> Running row-count and binary hash verification scripts to confirm 100% data fidelity between source and target systems.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Key Pillar 3 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">03.</span> Performance Tuning &amp; Index Optimization for Web Queries
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed mb-4">
+                    Desktop or legacy databases handle index execution differently than web applications serving hundreds of concurrent user requests over HTTP/REST interfaces.
+                </p>
+                <ul class="space-y-3 pl-1">
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Clustered Index Refactoring:</strong> Rebuilding primary keys to eliminate index fragmentation during high-volume insert/update workloads.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Covering Indexes for Web Endpoints:</strong> Creating non-clustered indexes specifically aligned with API payload queries to ensure sub-10ms response times.</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-base leading-relaxed">
+                        <i class="fa-solid fa-check text-sky-400 mt-1 shrink-0"></i>
+                        <span><strong>Stored Procedure Optimization:</strong> Converting embedded client-side SQL statements into parameter-bound server procedures to eliminate SQL injection and boost execution speed.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Key Pillar 4 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">04.</span> Migration Strategy Comparison
+                </h2>
+                <div class="overflow-x-auto mt-4 mb-6">
+                    <table class="w-full text-left border-collapse bg-slate-900/60 rounded-xl overflow-hidden border border-brand-border text-xs md:text-sm">
+                        <thead>
+                            <tr class="border-b border-brand-border text-sky-400 bg-slate-900 font-mono uppercase">
+                                <th class="p-3.5">Migration Strategy</th>
+                                <th class="p-3.5">Risk Level</th>
+                                <th class="p-3.5 text-emerald-400">Data Loss Prevention &amp; Uptime</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-brand-border/60 text-slate-300">
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">Direct "Big Bang" Cutover</td>
+                                <td class="p-3.5 text-rose-400">High (Requires system downtime)</td>
+                                <td class="p-3.5 text-slate-400">High risk of unforeseen schema errors during live window</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">Phased Module Migration</td>
+                                <td class="p-3.5 text-amber-400">Moderate (Dual maintenance needed)</td>
+                                <td class="p-3.5 text-slate-300">Controlled rollouts module by module with minimal risk</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">CDC-Driven Staged Sync</td>
+                                <td class="p-3.5 text-emerald-400 font-semibold">Low (Zero downtime)</td>
+                                <td class="p-3.5 text-emerald-400 font-semibold">100% Verified checksum matching with instant fallback protection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Call to Action Box -->
+            <div class="my-8 p-6 bg-slate-900/80 rounded-xl border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+                    <strong class="text-white block mb-1">Planning a database migration for your legacy application?</strong>
+                    At DataCore Systems, we specialize in seamless SQL Server migrations, database restructuring, and resilient web backend architectures.
+                </p>
+                <a href="/#contact" class="shrink-0 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg transition-colors text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+
+            <!-- Tech / Topic Tags -->
+            <div class="flex flex-wrap gap-2 pt-6 border-t border-brand-border/60 font-mono text-xs text-slate-400">
+                <span class="bg-slate-800 px-2.5 py-1 rounded">SQL Server</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Database Migration</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">ETL Pipelines</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Backend Development</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Data Governance</span>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500">
+        &copy; <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

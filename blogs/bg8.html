@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Discover practical solutions to common MS Access front-end and SQL Server back-end issues, from query lag to multi-user locking." />
+    <title>MS Access to SQL Server: Solutions & Practices | DataCore Systems</title>
+
+<!-- Favicon Integration final Sep 8 -->
+<link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+<link rel="canonical" href="https://data-core.dev/blogs/bg8" />
+
+    <!-- Open Graph / Facebook Link Preview Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="MS Access to SQL Server: Solutions & Practices | DataCore Systems" />
+    <meta property="og:description" content="Solve performance bottlenecks and connection issues when linking a Microsoft Access front-end to a enterprise SQL Server backend." />
+    <meta property="og:image" content="https://data-core.dev/images/blogs/bg8.png" />
+    <meta property="og:url" content="https://data-core.dev/blogs/bg8" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://data-core.dev/blogs/bg8" />
+    <meta name="twitter:title" content="MS Access to SQL Server: Solutions & Practices | DataCore Systems" />
+    <meta name="twitter:description" content="Solve performance bottlenecks and connection issues when linking a Microsoft Access front-end to a enterprise SQL Server backend." />
+    <meta name="twitter:image" content="https://data-core.dev/images/blogs/bg8.png" />
+
+    <!-- JSON-LD TechArticle Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "MS Access to SQL Server: Solutions & Practices | DataCore Systems",
+      "description": "Solve performance bottlenecks and connection issues when linking a Microsoft Access front-end to a enterprise SQL Server backend.",
+      "image": "https://data-core.dev/images/blogs/bg8.png",
+      "author": {
+        "@type": "Person",
+        "name": "Momtaz U"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DataCore Systems",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://data-core.dev/favicon-v2.png"
+        }
+      },
+      "datePublished": "2026-09-02",
+      "mainEntityOfPage": "https://data-core.dev/blogs/bg8"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon-32.ico">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { bg: '#0b0f17', card: '#111827', border: '#1f2937' }
+                    }
+                }
+            }
+        }
+    </script>
+	
+</head>
+
+<body class="bg-brand-bg text-slate-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="py-6 px-6 border-b border-brand-border">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="/#blog" class="text-white text-sm font-bold flex items-center gap-2 hover:text-emerald-400 transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span class="text-xs font-mono text-slate-500">Published: Sep 02, 2026</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="py-12 px-6 flex-1">
+        <article class="max-w-4xl mx-auto bg-brand-card rounded-2xl border border-brand-border p-8">
+            
+            <!-- Category Header -->
+            <div class="pb-6 mb-6 border-b border-brand-border flex items-center justify-between">
+                <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Database Architecture &amp; Enterprise Solutions</span>
+                <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded">By Momtaz U</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                Microsoft Access Front-end with SQL Server Back-end: Common Issues &amp; Solutions
+            </h1>
+
+            <!-- Introduction Paragraph -->
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                Combining Microsoft Access (front-end) with SQL Server (back-end) offers rapid development alongside enterprise performance, but several technical challenges can occur:
+            </p>
+
+            <!-- Featured Blog Image -->
+            <div class="mb-8 rounded-xl overflow-hidden border border-brand-border bg-slate-900">
+                <img src="../images/blogs/bg8.png" alt="Microsoft Access Front-end with SQL Server Back-end: Common Issues & Solutions" class="w-full h-auto object-cover block" />
+            </div>
+
+            <!-- Key Issue 1 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">01.</span> Data Modification and #Deleted Errors
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Missing Primary Keys, NULL values in BIT fields, or missing TIMESTAMP (RowVersion) columns cause Access to misinterpret record states, leading to write conflicts or errors. <strong class="text-white">Fix:</strong> Define PKs, set BIT fields to NOT NULL (default 0), and add RowVersion columns.
+                </p>
+            </div>
+
+            <!-- Key Issue 2 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">02.</span> Network Latency &amp; Slow Loading
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Binding forms to large tables or using local VBA functions forces local query execution, pulling large datasets across the network. <strong class="text-white">Fix:</strong> Use server-side processing (Views, Stored Procedures, Pass-Through queries) and filter data early using unbound or dynamic forms.
+                </p>
+            </div>
+
+            <!-- Key Issue 3 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">03.</span> Connection Overhead
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Constant reconnection causes TCP overhead and drops on unstable networks. <strong class="text-white">Fix:</strong> Maintain a persistent background connection to keep the ODBC pipe active, and use Remote Desktop/Citrix over WAN/VPN.
+                </p>
+            </div>
+
+            <!-- Key Issue 4 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">04.</span> Syntax Mismatches
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Access SQL and T-SQL differ in wildcards (<code class="text-sky-400 font-mono">*</code> vs. <code class="text-sky-400 font-mono">%</code>), string quotes (<code class="text-sky-400 font-mono">"</code> vs. <code class="text-sky-400 font-mono">'</code>), date formatting (<code class="text-sky-400 font-mono">#</code> vs. <code class="text-sky-400 font-mono">'</code>), and functions (<code class="text-sky-400 font-mono">Nz</code> vs. <code class="text-sky-400 font-mono">ISNULL</code>).
+                </p>
+            </div>
+
+            <!-- Key Issue 5 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">05.</span> Multi-User Front-End Sharing
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Sharing a single <code class="text-sky-400 font-mono">.accdb</code> file over a network drive leads to file corruption and lockups. <strong class="text-white">Fix:</strong> Deploy local <code class="text-sky-400 font-mono">.accde</code> copies to each user's workstation.
+                </p>
+            </div>
+
+            <!-- Key Issue 6 -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <span class="text-sky-400 font-mono text-sm">06.</span> ODBC DSN Issues
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Manual DSN configurations cause deployment errors. <strong class="text-white">Fix:</strong> Use DSN-less connection strings via VBA.
+                </p>
+            </div>
+
+            <!-- Summary Statement -->
+            <div class="mb-8 p-4 bg-slate-900/60 rounded-xl border border-brand-border text-slate-300 leading-relaxed text-base">
+                At <strong class="text-white">DataCore Systems</strong>, having developed a large-scale MS Access front-end connected to around 195 data tables, we no longer face these issues in our daily operations. Having encountered and resolved each of these challenges step by step over time, our architecture has evolved into a highly stable, performant, and robust system.
+            </div>
+
+            <!-- Call to Action Box -->
+            <div class="my-8 p-6 bg-slate-900/80 rounded-xl border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+                    <strong class="text-white block mb-1">Looking to optimize your MS Access &amp; SQL Server database environment?</strong>
+                    DataCore Systems specializes in high-performance database migrations, connection stability, and enterprise-grade VBA architecture.
+                </p>
+                <a href="/#contact" class="shrink-0 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg transition-colors text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+
+            <!-- Tech / Topic Tags -->
+            <div class="flex flex-wrap gap-2 pt-6 border-t border-brand-border/60 font-mono text-xs text-slate-400">
+                <span class="bg-slate-800 px-2.5 py-1 rounded">MS Access</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">SQL Server</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">ODBC DSN-Less</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">T-SQL</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Database Optimization</span>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500">
+        &copy; <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

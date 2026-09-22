@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise SQLite WASM Local-First Sync Architecture | DataCore Systems</title>
+    <meta name="description" content="Explore enterprise local-first web architecture using client-side SQLite WASM paired with SQL Server backends for zero-latency operations." />
+
+    <!-- Favicon Integration -->
+    <link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+    <link rel="canonical" href="https://data-core.dev/blogs/bg12" />
+    
+    <!-- Open Graph / Facebook Link Preview Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Enterprise SQLite WASM Local-First Sync Architecture | DataCore Systems" />
+    <meta property="og:description" content="Discover how WebAssembly SQLite and SQL Server sync deliver sub-millisecond local queries and offline fault tolerance for web applications." />
+    <meta property="og:image" content="https://data-core.dev/images/blogs/bg12.png" />
+    <meta property="og:url" content="https://data-core.dev/blogs/bg12" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://data-core.dev/blogs/bg12" />
+    <meta name="twitter:title" content="Enterprise SQLite WASM Local-First Sync Architecture" />
+    <meta name="twitter:description" content="Discover how WebAssembly SQLite and SQL Server sync deliver sub-millisecond local queries and offline fault tolerance for web applications." />
+    <meta name="twitter:image" content="https://data-core.dev/images/blogs/bg12.png" />
+
+    <!-- JSON-LD TechArticle Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Building Enterprise Local-First Web Applications with SQLite WASM & SQL Server",
+      "description": "Explore enterprise local-first web architecture using client-side SQLite WASM paired with SQL Server backends for zero-latency operations.",
+      "image": "https://data-core.dev/images/blogs/bg12.png",
+      "author": {
+        "@type": "Person",
+        "name": "Momtaz U"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DataCore Systems",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://data-core.dev/favicon-v2.png"
+        }
+      },
+      "datePublished": "2026-09-10",
+      "mainEntityOfPage": "https://data-core.dev/blogs/bg12"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { bg: '#0b0f17', card: '#111827', border: '#1f2937' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-bg text-slate-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="py-6 px-6 border-b border-brand-border">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="/#blog" class="text-white text-sm font-bold flex items-center gap-2 hover:text-emerald-400 transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span class="text-xs font-mono text-slate-500">Published: Sep 10, 2026</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="py-12 px-6 flex-1">
+        <article class="max-w-4xl mx-auto bg-brand-card rounded-2xl border border-brand-border p-8">
+            
+            <!-- Category Header -->
+            <div class="pb-6 mb-6 border-b border-brand-border flex items-center justify-between">
+                <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Web Architecture &amp; Database Sync</span>
+                <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded">By Momtaz U</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                Building Enterprise Local-First Web Applications with SQLite WASM &amp; SQL Server
+            </h1>
+
+            <!-- Section 1 -->
+            <h2 class="text-xl font-bold text-white mb-4">
+                The Bottleneck of Network-Dependent Web Apps
+            </h2>
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                Traditional web applications force every user click, data entry, and report lookup to cross an external network boundary. When field connection degrades, UI spinners block productivity. Local-first architecture shifts the primary source of truth to the user's browser, eliminating reliance on active network connections for core UI rendering.
+            </p>
+
+            <!-- Featured Blog Image -->
+            <div class="mb-8 rounded-xl overflow-hidden border border-brand-border bg-slate-900">
+                <img src="../images/blogs/bg12.png" alt="Building Enterprise Local-First Web Applications with SQLite WASM & SQL Server" class="w-full h-auto object-cover block" />
+            </div>
+
+            <!-- Section 2 -->
+            <h2 class="text-xl font-bold text-white mb-4">
+                Running SQLite in the Browser via WebAssembly (WASM)
+            </h2>
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                By pairing SQLite compiled to WebAssembly (WASM) with the Origin Private File System (OPFS), web browsers can execute complex relational queries locally with sub-millisecond latency. This setup gives client-side web apps native desktop performance and persistent storage capacity without external server overhead.
+            </p>
+
+            <!-- Section 3 -->
+            <h2 class="text-xl font-bold text-white mb-4">
+                Bidirectional Background Synchronization with SQL Server
+            </h2>
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                A local-first application requires a resilient backend sync engine. Writes are committed locally to SQLite WASM instantly, while a background sync worker queues mutations and handles bidirectional synchronization with a Microsoft SQL Server backend. Deterministic conflict resolution rules guarantee transaction integrity across distributed multi-user environments.
+            </p>
+
+            <!-- Section 4 Header -->
+            <h2 class="text-lg font-bold text-white mb-4">
+                Key Business &amp; Technical Outcomes
+            </h2>
+
+            <!-- Section 4 List -->
+            <div class="space-y-4 mb-8">
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">01.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        <strong class="text-white">Zero-Downtime Reliability:</strong> Field workers retain complete operational capacity during severe network disruptions.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">02.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        <strong class="text-white">Sub-Millisecond UI Latency:</strong> Zero latency on read/write operations enhances user productivity.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">03.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        <strong class="text-white">Reduced Server Infrastructure Costs:</strong> Client-side query execution reduces CPU and I/O loads on central database servers.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Call to Action Box -->
+            <div class="my-8 p-6 bg-slate-900/80 rounded-xl border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+                    <strong class="text-white block mb-1">Building a high-performance local-first web application?</strong>
+                    DataCore Systems specializes in SQLite WASM, offline background synchronization engines, and SQL Server backend integrations.
+                </p>
+                <a href="/#contact" class="shrink-0 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg transition-colors text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+
+            <!-- Tech / Topic Tags -->
+            <div class="flex flex-wrap gap-2 pt-6 border-t border-brand-border/60 font-mono text-xs text-slate-400">
+                <span class="bg-slate-800 px-2.5 py-1 rounded">SQLite WASM</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Local-First</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">SQL Server</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">OPFS</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Offline Sync</span>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500">
+        &copy; <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

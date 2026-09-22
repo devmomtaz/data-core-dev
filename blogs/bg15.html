@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Concurrency Local-First Web Architecture: 193 Files, Zero Lag | DataCore Systems</title>
+    <meta name="description" content="Discover how UAS Central achieved zero lag across 193 assets and high concurrency using a local-first web architecture powered by SQL Server." />
+
+    <!-- Favicon Integration -->
+    <link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+    <link rel="canonical" href="https://data-core.dev/blogs/bg15" />
+    
+    <!-- Open Graph / Facebook Link Preview Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="High-Concurrency Local-First Web Architecture: 193 Files, Zero Lag | DataCore Systems" />
+    <meta property="og:description" content="Discover how UAS Central achieved zero lag across 193 assets and high concurrency using a local-first web architecture powered by SQL Server." />
+    <meta property="og:image" content="https://data-core.dev/images/blogs/bg15.png" />
+    <meta property="og:url" content="https://data-core.dev/blogs/bg15" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://data-core.dev/blogs/bg15" />
+    <meta name="twitter:title" content="High-Concurrency Local-First Web Architecture: 193 Files, Zero Lag" />
+    <meta name="twitter:description" content="Discover how UAS Central achieved zero lag across 193 assets and high concurrency using a local-first web architecture powered by SQL Server." />
+    <meta name="twitter:image" content="https://data-core.dev/images/blogs/bg15.png" />
+
+    <!-- JSON-LD TechArticle Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "High-Concurrency Local-First Web Architecture: 193 Files, Zero Lag",
+      "description": "Discover how UAS Central achieved zero lag across 193 assets and high concurrency using a local-first web architecture powered by SQL Server.",
+      "image": "https://data-core.dev/images/blogs/bg15.png",
+      "author": {
+        "@type": "Person",
+        "name": "Momtaz U"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DataCore Systems",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://data-core.dev/favicon-v2.png"
+        }
+      },
+      "datePublished": "2026-09-14",
+      "mainEntityOfPage": "https://data-core.dev/blogs/bg15"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { bg: '#0b0f17', card: '#111827', border: '#1f2937' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-brand-bg text-slate-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="py-6 px-6 border-b border-brand-border">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="/#blog" class="text-white text-sm font-bold flex items-center gap-2 hover:text-emerald-400 transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span class="text-xs font-mono text-slate-500">Published: Sep 14, 2026</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="py-12 px-6 flex-1">
+        <article class="max-w-4xl mx-auto bg-brand-card rounded-2xl border border-brand-border p-8">
+            
+            <!-- Category Header -->
+            <div class="pb-6 mb-6 border-b border-brand-border flex items-center justify-between">
+                <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">System Architecture</span>
+                <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded">By Momtaz U</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                High-Concurrency Local-First Web Architecture: 193 Files, Zero Lag
+            </h1>
+
+            <p class="text-slate-300 leading-relaxed text-base mb-6">
+                When enterprise web apps grow, database queries slow down, interfaces lag, and workers in fast-paced environments end up waiting on spinning loaders.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                Starting in September 2023, I built <strong class="text-white">UAS Central</strong>—a local-first platform designed to unify complex facility operations into a high-performance system for operations of: inland inventory, packaging, truck loading, shipping, warehouse management, and cleaning of mixture machines.
+            </p>
+
+            <!-- Featured Blog Image -->
+            <div class="mb-8 rounded-xl overflow-hidden border border-brand-border bg-slate-900">
+                <img src="../images/blogs/bg15.png" alt="High-Concurrency Local-First Web Architecture: 193 Files, Zero Lag" class="w-full h-auto object-cover block" />
+            </div>
+
+            <!-- System Metrics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-brand-border">
+                    <span class="block text-sky-400 font-mono text-lg font-bold">114 PHP Files</span>
+                    <span class="text-xs text-slate-400">Modular scripts handling backend processing and view logic.</span>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-brand-border">
+                    <span class="block text-sky-400 font-mono text-lg font-bold">63 JavaScript Files</span>
+                    <span class="text-xs text-slate-400">Client-side routines driving interactive workflows.</span>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-brand-border">
+                    <span class="block text-sky-400 font-mono text-lg font-bold">16 CSS Files</span>
+                    <span class="text-xs text-slate-400">Centralized, lean styling.</span>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-brand-border">
+                    <span class="block text-sky-400 font-mono text-lg font-bold">65 User Pages</span>
+                    <span class="text-xs text-slate-400">End-to-end management for inventory, packaging, loading, shipping &amp; cleaning schedules.</span>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-brand-border sm:col-span-2 md:col-span-2">
+                    <span class="block text-sky-400 font-mono text-lg font-bold">115 Data Tables &amp; 48 Views</span>
+                    <span class="text-xs text-slate-400">Solid backend data structure powered by SQL Server for fast relational queries and clean data partitioning.</span>
+                </div>
+            </div>
+
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                Despite managing 193 assets and supporting 20 concurrent users entering data at peak times, the application operates with zero speed bottlenecks.
+            </p>
+
+            <!-- Section 1 Header -->
+            <h2 class="text-xl font-bold text-white mb-4">
+                Why Local-First Matters
+            </h2>
+
+            <p class="text-slate-300 leading-relaxed text-base mb-6">
+                Traditional web apps send every button click across the internet to a distant server. A local-first approach changes the dynamic:
+            </p>
+
+            <!-- Section 1 List -->
+            <div class="space-y-4 mb-8">
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">01.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        <strong class="text-white">Instant Response:</strong> Navigation and data entry update instantly on the user's device, bypassing network latency.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">02.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        <strong class="text-white">Background Syncing:</strong> Updates sync cleanly without locking the UI.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">03.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        <strong class="text-white">Operational Resilience:</strong> If warehouse Wi-Fi drops, work continues uninterrupted and syncs automatically when reconnected.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2 Header -->
+            <h2 class="text-xl font-bold text-white mb-4">
+                Scalability Without Bloat
+            </h2>
+
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                Separating background routines (procs), notifications, and domain modules into isolated files prevents memory bloat, delivering desktop-like speed inside a browser.
+            </p>
+
+            <!-- Call to Action Box -->
+            <div class="my-8 p-6 bg-slate-900/80 rounded-xl border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+                    <strong class="text-white block mb-1">Looking for expert architecture guidance?</strong>
+                    DataCore Systems specializes in enterprise database migrations, offline-first web applications, and SQL Server backend modernization.
+                </p>
+                <a href="/#contact" class="shrink-0 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg transition-colors text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+
+            <!-- Tech / Topic Tags -->
+            <div class="flex flex-wrap gap-2 pt-6 border-t border-brand-border/60 font-mono text-xs text-slate-400">
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Local-First Architecture</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">PHP</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">JavaScript</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">SQL Server</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">High Concurrency</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Enterprise Web Apps</span>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500">
+        &copy; <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

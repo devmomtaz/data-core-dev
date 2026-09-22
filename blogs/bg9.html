@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix MS Access & SQL Server Write Conflicts | DataCore Systems</title>
+<meta name="description" content="Resolve Write Conflict errors in Microsoft Access connected to SQL Server backends using timestamp fields and optimized queries." />
+<!-- Favicon Integration final Sep 8 -->
+<link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+<link rel="canonical" href="https://data-core.dev/blogs/bg9" />
+
+    <!-- Open Graph / Facebook Link Preview Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Fix MS Access & SQL Server Write Conflicts | DataCore Systems" />
+    <meta property="og:description" content="Resolve Write Conflict errors in Microsoft Access connected to SQL Server backends using timestamp fields and optimized queries." />
+    <meta property="og:image" content="https://data-core.dev/images/blogs/bg9.png" />
+    <meta property="og:url" content="https://data-core.dev/blogs/bg9" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://data-core.dev/blogs/bg9" />
+    <meta name="twitter:title" content="Fix MS Access & SQL Server Write Conflicts | DataCore Systems" />
+    <meta name="twitter:description" content="Resolve Write Conflict errors in Microsoft Access connected to SQL Server backends using timestamp fields and optimized queries." />
+    <meta name="twitter:image" content="https://data-core.dev/images/blogs/bg9.png" />
+
+    <!-- JSON-LD TechArticle Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Fix MS Access & SQL Server Write Conflicts | DataCore Systems",
+      "description": "Resolve Write Conflict errors in Microsoft Access connected to SQL Server backends using timestamp fields and optimized queries.",
+      "image": "https://data-core.dev/images/blogs/bg9.png",
+      "author": {
+        "@type": "Person",
+        "name": "Momtaz U"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DataCore Systems",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://data-core.dev/favicon-v2.png"
+        }
+      },
+      "datePublished": "2026-09-04",
+      "mainEntityOfPage": "https://data-core.dev/blogs/bg9"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon-32.ico">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { bg: '#0b0f17', card: '#111827', border: '#1f2937' }
+                    }
+                }
+            }
+        }
+    </script>
+	
+</head>
+
+<body class="bg-brand-bg text-slate-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="py-6 px-6 border-b border-brand-border">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="/#blog" class="text-white text-sm font-bold flex items-center gap-2 hover:text-emerald-400 transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span class="text-xs font-mono text-slate-500">Published: Sep 04, 2026</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="py-12 px-6 flex-1">
+        <article class="max-w-4xl mx-auto bg-brand-card rounded-2xl border border-brand-border p-8">
+            
+            <!-- Category Header -->
+            <div class="pb-6 mb-6 border-b border-brand-border flex items-center justify-between">
+                <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Database Architecture &amp; Solutions</span>
+                <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-1 rounded">By Momtaz U</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                Write Conflicts in Microsoft Access Front-end
+            </h1>
+
+            <!-- Introduction Paragraphs -->
+            <p class="text-slate-300 leading-relaxed text-base mb-4">
+                Write Conflict in a Microsoft Access front-end occurs when Access believes a record has changed between the time it was fetched and the time a user tries to save edits. When this happens, Access displays a dialogue box offering options to <strong class="text-white">Save Record</strong>, <strong class="text-white">Copy to Clipboard</strong>, or <strong class="text-white">Drop Changes</strong>.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed text-base mb-8">
+                This issue commonly arises in multi-user environments or bound forms connected to external back-ends like SQL Server. The primary driver is often subtle schema mismatches—such as missing Primary Keys, bit fields that permit NULL values, or the absence of a <code class="text-sky-400 font-mono">TIMESTAMP</code> (<code class="text-sky-400 font-mono">RowVersion</code>) column. Without a <code class="text-sky-400 font-mono">RowVersion</code> field, Access compares every column value to detect updates. If floating-point numbers or <code class="text-sky-400 font-mono">BIT</code> fields mismatch during this check, Access falsely flags a concurrency conflict.
+            </p>
+
+            <!-- Featured Blog Image -->
+            <div class="mb-8 rounded-xl overflow-hidden border border-brand-border bg-slate-900">
+                <img src="../images/blogs/bg9.png" alt="Write Conflicts in Microsoft Access Front-end" class="w-full h-auto object-cover block" />
+            </div>
+
+            <!-- Resolution Tips Header -->
+            <h2 class="text-lg font-bold text-white mb-4">
+                To resolve ‘write conflicts’ errors permanently:
+            </h2>
+
+            <!-- Actionable Tips List -->
+            <div class="space-y-4 mb-8">
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">01.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Ensure every backend table features a properly defined Primary Key and a <code class="text-sky-400 font-mono">TIMESTAMP</code> (<code class="text-sky-400 font-mono">RowVersion</code>) column.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">02.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Set default values of <code class="text-sky-400 font-mono">0</code> on all <code class="text-sky-400 font-mono">BIT</code> fields and mark them as <code class="text-sky-400 font-mono">NOT NULL</code>.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">03.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Replace bound forms with unbound VBA operations or dynamic pass-through queries, giving developers precise control over data transactions and ensuring consistent multi-user edits without disruptive pop-ups.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">04.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Refresh linked tables in the Access Front-end via the Linked Table Manager whenever schema changes occur on SQL Server, ensuring field metadata stays synchronized.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">05.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Call explicit <code class="text-sky-400 font-mono">Me.Dirty = False</code> in VBA before running action queries (<code class="text-sky-400 font-mono">UPDATE</code>/<code class="text-sky-400 font-mono">INSERT</code>) against the same record to commit pending UI changes first.
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <span class="text-sky-400 font-mono text-sm mt-0.5">06.</span>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Avoid binding a single form to multiple overlapping query sources or nested subforms that attempt to edit the exact same underlying record simultaneously.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Call to Action Box -->
+            <div class="my-8 p-6 bg-slate-900/80 rounded-xl border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+                    <strong class="text-white block mb-1">Experiencing persistent write conflicts or database errors?</strong>
+                    DataCore Systems specializes in high-performance MS Access front-end stabilization, SQL Server optimizations, and robust VBA architectures.
+                </p>
+                <a href="/#contact" class="shrink-0 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg transition-colors text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+
+            <!-- Tech / Topic Tags -->
+            <div class="flex flex-wrap gap-2 pt-6 border-t border-brand-border/60 font-mono text-xs text-slate-400">
+                <span class="bg-slate-800 px-2.5 py-1 rounded">MS Access</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">SQL Server</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">Write Conflict</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">RowVersion</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded">VBA</span>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500">
+        &copy; <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
