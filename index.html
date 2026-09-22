@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Custom web, mobile app & desktop app development, local-first architectures, Python/VBA Microsoft Office automation, and seamless database migrations by Momtaz U.">
+    <title>DataCore Systems | Enterprise Software Solutions</title>
+   
+<!-- Canonical URL -->
+<link rel="canonical" href="https://data-core.dev/" />
+<!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DataCore Systems">
+<meta property="og:url" content="https://data-core.dev">
+<meta property="og:title" content="DataCore Systems | Enterprise Software Solutions">
+<meta property="og:description" content="Architecting custom web & mobile apps, desktop software, local-first databases, and Python/VBA Office automation. Expert end-to-end software & database migration services.">
+<meta property="og:image" content="https://data-core.dev/og-banner.png">
+<meta property="og:image:secure_url" content="https://data-core.dev/og-banner.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:author" content="Momtaz U">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="data-core.dev">
+<meta name="twitter:url" content="https://data-core.dev">
+<meta name="twitter:title" content="DataCore Systems | Enterprise Software Solutions">
+<meta name="twitter:description" content="Custom web, mobile app & desktop app development, local-first architectures, Python/VBA Microsoft Office automation, and database migrations.">
+<meta name="twitter:image" content="https://data-core.dev/og-banner.png">
+
+<!-- Schema.org Structured Data (JSON-LD) for Search Engines & LinkedIn -->
+<!-- JSON-LD Organization & Professional Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "DataCore Systems",
+  "url": "https://data-core.dev",
+  "logo": "https://data-core.dev/favicon-v2.png",
+  "image": "https://data-core.dev/images/og-main.png",
+  "description": "Custom web application development, Mobile application development, Enterprise database architecture, MS Access to SQL Server migrations, and local-first web applications.",
+  "knowsAbout": [
+    "Microsoft Access",
+    "SQL Server",
+    "Database Migration",
+    "VBA Automation",
+    "PHP",
+    "JavaScript",
+	"Python",
+	"Flutter",
+	"Web Applications",
+    "Local-First Applications"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Momtaz U"
+  }
+}
+</script>
+
+<!-- ENDED Open Graph / Facebook / LinkedIn Meta Tags -->
+
+   
+    <!-- Favicon Integration final Sep 8 -->
+<link rel="icon" type="image/x-icon" href="favicons-32.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> 
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0B0F17',
+                            card: '#111827',
+                            border: '#1F2937',
+                            accent: '#0284C7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Global CSS & Back to Top Button Styling -->
+    <style>
+        html, body {
+            background-color: #0B0F17;
+            color: #F3F4F6;
+            margin: 0;
+            padding: 0;
+            overflow-x: clip; /* Fixes position:fixed container bugs */
+        }
+
+        /* Fixed Top Button Styles */
+        #backToTopBtn {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            z-index: 999999 !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50% !important;
+            background-color: #034068 !important;
+            color: #ffffff !important;
+            border: 2px solid rgba(125, 211, 252, 0.5) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+            cursor: pointer !important;
+            display: none; /* Toggled via JavaScript */
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.2s ease, background-color 0.2s ease !important;
+        }
+
+        #backToTopBtn:hover {
+            transform: scale(1.1) !important;
+            background-color: #02568f !important;
+        }
+
+        #backToTopBtn svg {
+            width: 24px;
+            height: 24px;
+            stroke: #ffffff;
+            stroke-width: 3;
+            fill: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-sky-500 selection:text-white relative">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Header Logo with Hover Preview Card -->
+            <a href="#" class="group relative flex items-center gap-3 py-2">
+                <img src="favicon-v2.png" alt="DataCore Systems Logo" class="w-10 h-10 object-contain drop-shadow-md">
+                <div>
+                    <span class="text-xl font-bold text-white tracking-tight">DataCore <span class="text-[#16BEDC]">Systems</span></span>
+					
+                    
+                    <span class="text-[11px] font-sans font-semibold text-emerald-400 tracking-wider uppercase block -mt-0.5 opacity-90 hover:text-emerald-300 transition-colors">
+                        Enterprise Software &amp; Systems Architecture
+                    </span>
+                </div>
+
+                <!-- Hover/mouse over Popup Card -->
+                <div class="hidden group-hover:block absolute top-full left-0 mt-2 z-50 w-64 p-4 bg-brand-card rounded-2xl border border-sky-500/50 shadow-2xl shadow-sky-500/10 backdrop-blur-lg transition-all duration-200">
+                    <img src="logo-v2.png" alt="DataCore Systems Full Logo" class="w-full h-auto object-contain mx-auto rounded-lg">
+                </div>
+            </a>
+            
+            <!--   <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">   -->
+			<nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-300">
+			
+                <a href="#about" class="hover:text-sky-400 transition-colors">Overview</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors">Stack</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Featured Systems</a>
+				<a href="#team" class="hover:text-sky-400 transition-colors">Our Team</a>
+
+
+<div style="position: relative; display: inline-block;" 
+     onmouseenter="this.querySelector('.nav-dropdown-menu').style.display='block'" 
+     onmouseleave="this.querySelector('.nav-dropdown-menu').style.display='none'">
+  
+  <!-- Main Services Link -->
+  <a href="#services" class="text-slate-400 no-underline p-2 inline-block hover:text-sky-400 transition-colors">
+  Services ▾
+</a>
+    
+  <!-- Dropdown Popup -->
+  <div class="nav-dropdown-menu" 
+       style="display: none; position: absolute; top: 100%; left: 0; background-color: #0b1120; min-width: 220px; border: 1px solid #1e293b; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 9999; padding: 6px 0;">
+    <a href="/srvweb" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Web Application</a>
+    <a href="/srvloc" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Local-first Web Application</a>
+	<a href="/srvmob" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Mobile Application</a>
+    <a href="/srvdm" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Database Migration</a>
+	<a href="/srvdesk" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Desktop Software Engineering</a>
+    <a href="/srvvba" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Custom VBA Automation</a>
+  </div>
+</div>
+                <a href="#portfolio" class="hover:text-sky-400 transition-colors">Portfolio</a>
+				<!--  <a href="review.html" class="hover:text-sky-400 transition-colors">Reviews</a>  -->
+                <a href="#blog" class="hover:text-sky-400 transition-colors">Blog</a>
+                <a href="#calculator" class="hover:text-sky-400 transition-colors">ROI</a>
+                <a href="#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
+            </nav>
+
+        </div>
+    </header>
+
+    
+    <!-- Hero Section -->
+<section id="about" class="pt-10 pb-20 px-6 border-b border-brand-border relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-950/80 border border-sky-800/50 text-sky-400 text-xs font-mono">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> Available for Remote Contracts &amp; System Migrations
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Architecting <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">High-Reliability</span> Web Applications &amp; Databases
+            </h1>
+			
+			
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    Momtaz U — Freelance Programmer, Web Application Developer &amp; Systems Architect. Specializing in local-first database architectures, complex data migration pipelines, custom compliance reporting, and modern full-stack web platforms.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="px-7 py-3.5 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-sky-600/25 flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="#projects" class="px-7 py-3.5 bg-brand-card hover:bg-slate-800 text-slate-200 font-semibold rounded-xl border border-brand-border transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> View Systems
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-brand-card p-6 rounded-2xl border border-brand-border font-mono text-sm shadow-2xl relative">
+                <div class="flex items-center justify-between pb-4 border-b border-brand-border text-slate-500 text-xs">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-terminal text-sky-400"></i> system-spec.json</span>
+                    <span class="text-emerald-400">ONLINE</span>
+                </div>
+                <pre class="mt-4 text-slate-300 leading-relaxed overflow-x-auto"><code>{
+  <span class="text-sky-400">"engineer"</span>: <span class="text-emerald-300">"Momtaz U"</span>,
+  <span class="text-sky-400">"primary_stack"</span>: [
+    <span class="text-emerald-300">"PHP"</span>, <span class="text-emerald-300">"Laravel"</span>, <span class="text-emerald-300">"JavaScript"</span>,
+    <span class="text-emerald-300">"Python"</span>, <span class="text-emerald-300">"MySQL"</span>, <span class="text-emerald-300">"SQL Server"</span>
+  ],
+  <span class="text-sky-400">"specialties"</span>: [
+    <span class="text-emerald-300">"Local-First Architectures"</span>,
+    <span class="text-emerald-300">"Access-to-Web Migrations"</span>,
+    <span class="text-emerald-300">"Compliance Reporting"</span>
+  ],
+  <span class="text-sky-400">"rate"</span>: <span class="text-amber-300">"$40 / hr"</span>
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Technology Stack -->
+    <!--<section id="skills" class="py-20 px-6 border-b border-brand-border bg-slate-950/40">  -->
+	<section id="skills" class="pt-10 pb-20 px-6 border-b border-brand-border bg-slate-950/40">
+	
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-3">Engineered Tech Stack</h2>
+                <p class="text-slate-400 text-sm">Battle-tested languages, engines, and tools utilized to build secure enterprise software.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="bg-brand-card p-5 rounded-xl border border-brand-border text-center hover:border-sky-500/50 transition-all">
+                    <i class="fa-brands fa-php text-3xl text-indigo-400 mb-3 block"></i>
+                    <span class="text-sm font-semibold text-white block">PHP</span>
+                    <span class="text-xs text-slate-500 font-mono">Backend Apps</span>
+                </div>
+
+                <div class="bg-brand-card p-5 rounded-xl border border-brand-border text-center hover:border-sky-500/50 transition-all">
+                    <i class="fa-brands fa-laravel text-3xl text-rose-500 mb-3 block"></i>
+                    <span class="text-sm font-semibold text-white block">Laravel</span>
+                    <span class="text-xs text-slate-500 font-mono">Web Framework</span>
+                </div>
+
+                <div class="bg-brand-card p-5 rounded-xl border border-brand-border text-center hover:border-sky-500/50 transition-all">
+                    <i class="fa-brands fa-js text-3xl text-yellow-400 mb-3 block"></i>
+                    <span class="text-sm font-semibold text-white block">JavaScript</span>
+                    <span class="text-xs text-slate-500 font-mono">Interactive UIs</span>
+                </div>
+
+                <div class="bg-brand-card p-5 rounded-xl border border-brand-border text-center hover:border-sky-500/50 transition-all">
+                    <i class="fa-brands fa-python text-3xl text-blue-400 mb-3 block"></i>
+                    <span class="text-sm font-semibold text-white block">Python</span>
+                    <span class="text-xs text-slate-500 font-mono">Data Automation</span>
+                </div>
+				
+                <!-- Flutter Card -->
+                <div class="bg-[#0b1320] border border-slate-800/60 rounded-xl p-6 flex flex-col items-center justify-between text-center hover:border-slate-700 transition-all shadow-lg">
+                  <div class="h-12 flex items-center justify-center mb-4">
+                    <svg class="w-9 h-9" viewBox="0 0 166 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M100.2 0L0 100.2l30.6 30.6L161.4 0h-61.2z" fill="#47C5FB"/>
+                      <path d="M100.2 90.5L42.2 148.5l30.6 30.6 58-58h-30.6z" fill="#47C5FB"/>
+                      <path d="M72.8 179.1l30.6 22.9h61.2l-61.2-61.2-30.6 38.3z" fill="#01579B"/>
+                      <path d="M100.2 90.5l-27.4 27.4 30.6 30.6 27.4-27.4-30.6-30.6z" fill="#02569B"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-bold text-base mb-1">Flutter</h3>
+                    <p class="text-slate-500 font-mono text-xs">Cross-Platform Apps</p>
+                  </div>
+                </div>
+				
+                <!-- CSS Card -->
+                <div class="bg-brand-card p-5 rounded-xl border border-brand-border text-center hover:border-sky-500/50 transition-all">
+                    <i class="fa-brands fa-bootstrap text-3xl text-purple-400 mb-3 block"></i>
+                    <span class="text-sm font-semibold text-white block">Bootstrap &amp; CSS</span>
+                    <span class="text-xs text-slate-500 font-mono">Responsive Web</span>
+                </div>
+			
+                <!-- MySQL Round Badge Card -->
+                <div class="bg-[#0b1320] border border-slate-800/60 rounded-xl p-6 flex flex-col items-center justify-between text-center hover:border-slate-700 transition-all shadow-lg">
+                  <div class="h-12 flex items-center justify-center mb-4">
+                    <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="50" cy="50" r="48" fill="#467B9B" />
+                      <path d="M 57 21 C 60 22 63 24 66 27 C 70 32 72 37 77 42 C 81 46 86 48 83 50 C 79 47 75 44 71 40 C 68 37 66 33 63 29 C 61 33 60 37 61 41 C 61 43 60 45 59 43 C 58 41 58 38 59 34 C 58 31 56 27 57 21 Z" fill="#FFFFFF" />
+                      <text x="14" y="65" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#FFFFFF">My</text>
+                      <text x="44" y="65" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#F29111">SQL</text>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-bold text-base mb-1">MySQL</h3>
+                    <p class="text-slate-500 font-mono text-xs">Open Source DB</p>
+                  </div>
+                </div>
+
+                <!-- SQL Server Card -->
+                <div class="bg-[#0b1320] border border-slate-800/60 rounded-xl p-6 flex flex-col items-center justify-between text-center hover:border-slate-700 transition-all shadow-lg">
+                  <div class="h-12 flex items-center justify-center mb-4">
+                    <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.34 6 2s-2.13 2-6 2-6-1.34-6-2 2.13-2 6-2zm0 14c-3.87 0-6-1.34-6-2v-2.17c1.47.74 3.63 1.17 6 1.17s4.53-.43 6-1.17V17c0 .66-2.13 2-6 2zm0-5c-3.87 0-6-1.34-6-2v-2.17c1.47.74 3.63 1.17 6 1.17s4.53-.43 6-1.17V12c0 .66-2.13 2-6 2z" fill="#00C4B3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-bold text-base mb-1">SQL Server</h3>
+                    <p class="text-slate-500 font-mono text-xs">Enterprise Relational DB</p>
+                  </div>
+                </div>
+              
+                <!-- MS Access Card -->
+                <div class="bg-[#0b1320] border border-slate-800/60 rounded-xl p-6 flex flex-col items-center justify-between text-center hover:border-slate-700 transition-all shadow-lg">
+                  <div class="h-12 flex items-center justify-center mb-4">
+                    <div class="w-[30px] h-[30px] flex items-center justify-center rounded-lg bg-red-700 text-white font-bold font-sans text-base shadow-md border border-red-500/80">
+                      A
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-bold text-base mb-1">MS Access</h3>
+                    <p class="text-slate-500 font-mono text-xs">Legacy Automation</p>
+                  </div>
+                </div>
+
+                <!-- VBA Card -->
+                <div class="bg-[#0b1320] border border-slate-800/60 rounded-xl p-6 flex flex-col items-center justify-between text-center hover:border-slate-700 transition-all shadow-lg">
+                  <div class="h-12 flex items-center justify-center mb-4">
+                    <svg class="w-11 h-11" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="50" cy="50" r="48" fill="url(#bg-gradient)" stroke="#333" stroke-width="1"/>
+                      <g transform="translate(0, 16)">
+                        <path d="M50 12 L65 19.5 L50 27 L35 19.5 Z" fill="#3B6598" stroke="#FFF" stroke-width="1"/>
+                        <path d="M35 19.5 L50 27 L50 36 L35 28.5 Z" fill="#2C4E78" stroke="#FFF" stroke-width="1"/>
+                        <path d="M50 27 L65 19.5 L65 28.5 L50 36 Z" fill="#5C85B8" stroke="#FFF" stroke-width="1"/>
+                        <path d="M30 23 L45 30.5 L30 38 L15 30.5 Z" fill="#B85C00" stroke="#FFF" stroke-width="1"/>
+                        <path d="M15 30.5 L30 38 L30 50 L15 42.5 Z" fill="#8C4400" stroke="#FFF" stroke-width="1"/>
+                        <path d="M30 38 L45 30.5 L45 42.5 L30 50 Z" fill="#D9771C" stroke="#FFF" stroke-width="1"/>
+                        <path d="M50 27 L65 34.5 L50 42 L35 34.5 Z" fill="#C9C400" stroke="#FFF" stroke-width="1"/>
+                        <path d="M35 34.5 L50 42 L50 54 L35 46.5 Z" fill="#999400" stroke="#FFF" stroke-width="1"/>
+                        <path d="M50 42 L65 34.5 L65 46.5 L50 54 Z" fill="#E6E122" stroke="#FFF" stroke-width="1"/>
+                        <path d="M70 24 L85 31.5 L70 39 L55 31.5 Z" fill="#6B006B" stroke="#FFF" stroke-width="1"/>
+                        <path d="M55 31.5 L70 39 L70 51.5 L55 44 Z" fill="#4A004A" stroke="#FFF" stroke-width="1"/>
+                        <path d="M70 39 L85 31.5 L85 44 L70 51.5 Z" fill="#8C1C8C" stroke="#FFF" stroke-width="1"/>
+                      </g>
+                      <defs>
+                        <radialGradient id="bg-gradient" cx="50%" cy="40%" r="50%">
+                          <stop offset="0%" stop-color="#4A4A4A"/>
+                          <stop offset="100%" stop-color="#1A1A1A"/>
+                        </radialGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-bold text-base mb-1">VBA</h3>
+                    <p class="text-slate-500 font-mono text-xs">For Office Automation</p>
+                  </div>
+                </div>
+
+                <!-- Excel Card -->
+                <div class="bg-[#0b1320] border border-slate-800/60 rounded-xl p-6 flex flex-col items-center justify-between text-center hover:border-slate-700 transition-all shadow-lg">
+                  <div class="h-12 flex items-center justify-center mb-4">
+                    <svg class="w-[37px] h-[37px]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 3H27C28.6569 3 30 4.34315 30 6V26C30 27.6569 28.6569 29 27 29H12V3Z" fill="#107C41"/>
+                      <path d="M12 3H27C28.6569 3 30 4.34315 30 6V9.5H12V3Z" fill="#33C481"/>
+                      <path d="M12 9.5H30V16H12V9.5Z" fill="#185C37"/>
+                      <path d="M12 16H30V22.5H12V16Z" fill="#107C41"/>
+                      <path d="M12 22.5H30V26C30 27.6569 28.6569 29 27 29H12V22.5Z" fill="#0E5C2F"/>
+                      <rect x="2.5" y="8.5" width="17" height="17" rx="3" fill="#000000" opacity="0.25"/>
+                      <rect x="2" y="8" width="17" height="17" rx="3" fill="#107C41"/>
+                      <path d="M7 12.5H9.5L10.5 15.3L11.5 12.5H14L11.8 16.5L14.2 20.5H11.7L10.5 17.6L9.3 20.5H6.8L9.2 16.5L7 12.5Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-bold text-base mb-1">Excel</h3>
+                    <p class="text-slate-500 font-mono text-xs">Spreadsheets & Data</p>
+                  </div>
+                </div>
+
+                <!-- Outlook Card -->
+                <div class="bg-[#0b1320] border border-slate-800/60 rounded-xl p-6 flex flex-col items-center justify-between text-center hover:border-slate-700 transition-all shadow-lg">
+                  <div class="h-12 flex items-center justify-center mb-4">
+                    <svg class="w-[37px] h-[37px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="42" y="24" width="52" height="48" rx="5" fill="#FFFFFF" stroke="#0072C6" stroke-width="5"/>
+                      <path d="M42 28 L68 53 L94 28" stroke="#0072C6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6 16 L56 7 L56 93 L6 84 Z" fill="#000000" opacity="0.2"/>
+                      <path d="M5 15 L55 6 L55 94 L5 85 Z" fill="#0072C6"/>
+                      <ellipse cx="30" cy="50" rx="11" ry="18" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-white font-bold text-base mb-1">Outlook</h3>
+                    <p class="text-slate-500 font-mono text-xs">Email Automation</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Projects -->
+    
+	<section id="projects" class="pt-10 pb-20 px-6 border-b border-brand-border">
+	
+        <div class="max-w-7xl mx-auto">
+		
+        <!-- Centered Header -->
+<div class="text-center max-w-3xl mx-auto mb-12">
+    <h2 class="text-3xl font-bold text-white mb-3">Enterprise Systems &amp; Database Engineering</h2>
+    <p class="text-slate-400 text-base leading-relaxed">
+        Modernizing full-stack web platforms, automating complex desktop workflows, and engineering robust database architectures focused on absolute data integrity, accuracy, and business continuity.
+    </p>
+	
+</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+			  
+	<!-- Project 1 -->
+<div class="bg-brand-card rounded-2xl border border-brand-border p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
+    <div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800/50">CUSTOM LIQUID SOLUTIONS LLC</span>
+            <i class="fa-solid fa-shield-halved text-slate-600 text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Local-First Web Application Architecture</h3>
+        
+        <!-- Paragraph & Right-Aligned Logo Layout -->
+        <div class="flex items-end justify-between gap-4 mb-6">
+            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+                We architected an offline-resilient local-first web application in 2024 with SQL Server back-end for warehouse management, purchase Order processing, customer Order Processing, Shipping, emailing order status and more for a corporate company in Florida.
+            </p>
+            
+            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                <img src="images/logo/logo-custom.png" alt="Custom Liquid Solutions Logo" class="w-full h-full object-contain" />
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60 font-mono text-xs text-slate-400">
+	    <span class="bg-slate-800 px-2.5 py-1 rounded">Laravel</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">PHP</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">JavaScript</span>
+		    <span class="bg-slate-800 px-2.5 py-1 rounded">Python</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">HTML</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">Bootstrap</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">SQL Server</span>
+    </div>
+</div>
+
+	
+		
+                <!-- Project 2 -->
+<div class="bg-brand-card rounded-2xl border border-brand-border p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
+    <div>
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono text-sky-400 bg-sky-950 px-3 py-1 rounded-full border border-sky-800/50">UAS OF AMERICA, INC.</span>
+            <i class="fa-solid fa-server text-slate-600 text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Enterprise Database Migration</h3>
+        
+        <!-- Paragraph & Right-Aligned Logo Layout -->
+        <div class="flex items-end justify-between gap-4 mb-6">
+            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Managing end-to-end database migrations and transforming legacy data structures from Excel and Access into SQL Server with a modern Access 365 front-end for generating 5 dozen compliance reports prescribed by ISO 9001 for a corporate company in Florida since 2023.
+            
+			</p>
+            
+            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                <img src="images/logo/uas-logos.png" alt="UAS Logo" class="w-full h-full object-contain" />
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap gap-2 pt-4 border-t border-brand-border/60 font-mono text-xs text-slate-400">
+        <span class="bg-slate-800 px-2.5 py-1 rounded">SQL Server</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">MS Access</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">VBA</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">Python</span>
+        <span class="bg-slate-800 px-2.5 py-1 rounded">Charting</span>
+    </div>
+</div>
+		
+	            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <!-- <section id="team" class="py-24 px-6 border-b border-brand-border bg-slate-950/40">   -->
+	<section id="team" class="pt-12 pb-24 px-6 border-b border-brand-border bg-slate-950/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Team</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Meet the dedicated engineers and specialists driving innovation and technical excellence at DataCore Systems.</p>
+				
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col items-center text-center hover:border-sky-500/50 transition-all shadow-xl">
+                    <img src="images/team/momtaz.png" alt="Momtaz U" class="w-48 h-48 rounded-full object-cover mb-5 border-2 border-sky-500/50 shadow-md">
+                    <h3 class="text-xl font-bold text-white">Momtaz U</h3>
+                    <span class="text-xs font-mono text-emerald-400 my-1 bg-emerald-950/80 px-2.5 py-0.5 rounded-full border border-emerald-800/50">Owner &amp; Team Leader</span>
+                    <p class="text-xs text-slate-400 font-mono mt-2 mb-3">System Architecture, PHP, JavaScript, HTML, Bootstrap, CSS, MySQL, SQL Server, VBA, MS Access, Excel and VBA Expert</p>
+                    <div class="mt-auto pt-3 border-t border-brand-border/60 w-full">
+                        <p class="text-xs text-slate-400">Bachelor of Arts Graduate in English Language &amp; Literature, Rajshahi University</p>
+                        <p class="text-xs text-slate-400 mt-1">Masters from Asian University of Bangladesh</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col items-center text-center hover:border-sky-500/50 transition-all shadow-xl">
+                    <img src="images/team/parvez.png" alt="Parvez" class="w-48 h-48 rounded-full object-cover mb-5 border-2 border-sky-500/50 shadow-md">
+                    <h3 class="text-xl font-bold text-white">S. Parvez</h3>
+                    <span class="text-xs font-mono text-sky-400 my-1 bg-sky-950/80 px-2.5 py-0.5 rounded-full border border-sky-800/50">Team Member</span>
+                    <p class="text-xs text-slate-400 font-mono mt-2 mb-3">System Architecture, Laravel, PHP, Python, Flutter, MySQL Expert</p>
+                    <div class="mt-auto pt-3 border-t border-brand-border/60 w-full">
+                        <p class="text-xs text-slate-400">BSc Graduate in CSE from Chittagong University</p>
+                        <p class="text-xs text-slate-400 mt-1">MSc in Information Technology from Dhaka University</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col items-center text-center hover:border-sky-500/50 transition-all shadow-xl">
+                    <img src="images/team/sharmin.png" alt="Sharmin Jessie" class="w-48 h-48 rounded-full object-cover mb-5 border-2 border-sky-500/50 shadow-md">
+                    <h3 class="text-xl font-bold text-white">Sharmin Jessie</h3>
+                    <span class="text-xs font-mono text-sky-400 my-1 bg-sky-950/80 px-2.5 py-0.5 rounded-full border border-sky-800/50">Team Member</span>
+                    <p class="text-xs text-slate-400 font-mono mt-2 mb-3">PHP &amp; JavaScript Expert</p>
+                    <div class="mt-auto pt-3 border-t border-brand-border/60 w-full">
+                        <p class="text-xs text-slate-400">BSc Graduate in CSE from Ahsanullah University of Science and Technology, Dhaka</p>
+                    </div>
+                </div>
+
+              <!-- Team Member 4 -->
+<div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col items-center text-center hover:border-sky-500/50 transition-all shadow-xl">
+    <div class="w-48 h-48 rounded-full overflow-hidden mb-5 border-2 border-sky-500/50 shadow-md bg-slate-900 flex items-center justify-center">
+        <img src="images/team/fahim-n.png" alt="Shahriar Fahim" class="w-full h-full object-cover scale-[1.00]">
+    </div>
+    <h3 class="text-xl font-bold text-white">Shahriar Fahim</h3>
+    <span class="text-xs font-mono text-sky-400 my-1 bg-sky-950/80 px-2.5 py-0.5 rounded-full border border-sky-800/50">Team Member</span>
+    <p class="text-xs text-slate-400 font-mono mt-2 mb-3">WordPress, Bootstrap &amp; UI/UX Expert</p>
+    <div class="mt-auto pt-3 border-t border-brand-border/60 w-full">
+        <p class="text-xs text-slate-400">BSc Graduate in Fashion and Merchandize from BGMEA University of Fashion &amp; Technology, Dhaka</p>
+    </div>
+</div>
+				
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <!--<section id="portfolio" class="py-24 px-6 bg-slate-950/50 border-b border-brand-border">   -->
+	<section id="portfolio" class="pt-12 pb-24 px-6 bg-slate-950/50 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Production Systems</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">A selection of enterprise software applications engineered and deployed for global clients.</p>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- App 1 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-800/40 rounded-full uppercase">
+                                LOGISTICS (USA)
+                            </span>
+                            <span class="text-xs font-mono text-slate-500">
+                                Florida, US
+                            </span>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-white mb-2">
+                            Warehouse & Inventory Management
+                        </h3>
+
+                        <div class="flex items-end justify-between gap-4">
+                            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+                                Complete enterprise logistics tool; a local-first web application built for UAS of America managing inventory and order fulfillment with SQL Server.
+                            </p>
+
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                                <img src="images/logo/uas-logos.png" alt="UAS Logo" class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-4 bg-slate-900/60 border-t border-brand-border text-xs font-mono text-slate-400">
+                        SQL Server • PHP • JavaScript • Python • Bootstrap
+                    </div>
+                </div>
+
+                <!-- App 2 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800/40">Healthcare (USA)</span>
+                            <span class="text-xs font-mono text-slate-500">California, US</span>
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white mb-2">Medical Transports Dispatch System</h3>
+                        
+                        <div class="flex items-end justify-between gap-4">
+                            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+                                Web application for medical transport management, employee duty schedule etc. for American Best Care Medical Transportation, Panorama City, CA.
+                            </p>
+                            
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                                <img src="images/logo/best-care.png" alt="Best Care Logo" class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-4 bg-slate-900/60 border-t border-brand-border text-xs font-mono text-slate-400">
+                        Laravel • PHP • JavaScript • MySQL • Bootstrap
+                    </div>
+                </div>
+
+                <!-- App 3 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            	<span class="text-xs font-semibold uppercase tracking-wider text-amber-200/70 bg-amber-950/40 px-3 py-1 rounded-full border border-amber-500/20">NGO &amp; Compliance</span>
+								
+                            <span class="text-xs font-mono text-slate-500">Arizona, US</span>
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white mb-2">Anti-Drug NGO Reporting Engine</h3>
+                        
+					
+						
+                        <div class="flex items-end justify-between gap-4">
+                            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+                                Web application for data gathering, analytical reporting, and compliance platform built for a non-profit organization named SACLA under MATFORCE.
+                            </p>
+                            
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                                <img src="images/logo/logo-sacla.png" alt="SACLA Logo" class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-4 bg-slate-900/60 border-t border-brand-border text-xs font-mono text-slate-400">
+                        PHP • JavaScript • Charting • MySQL
+                    </div>
+                </div>
+
+                <!-- App 4 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-purple-400 bg-purple-950/80 px-3 py-1 rounded-full border border-purple-800/40">Investment</span>
+                            <span class="text-xs font-mono text-slate-500">QLD, Australia</span>
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white mb-2">Financial Investment Management</h3>
+                        
+                        <div class="flex items-end justify-between gap-4">
+                            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+                                Customized apps for data storage, reporting, calculation, superannuation for financial advisors named Templetons Financial based in Queensland, Australia.
+                            </p>
+                            
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                                <img src="images/logo/logo-templeton.png" alt="Templeton Logo" class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-4 bg-slate-900/60 border-t border-brand-border text-xs font-mono text-slate-400">
+                        SQL Server • MS Access • Excel • VBA • Python
+                    </div>
+                </div>
+                
+                <!-- App 5 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-800/40">Online Survey</span>
+                            <span class="text-xs font-mono text-slate-500">Florida, US</span>
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white mb-2">Online Survey for Supplier Evaluation</h3>
+                        
+                        <div class="flex items-end justify-between gap-4">
+                            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+                                Web application for online survey system for supplier's evaluation with data-backed web form for a chemical company named Custom Liquid Solutions LLC, Florida.
+                            </p>
+                            
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                                <img src="images/logo/logo-custom.png" alt="Custom Liquid Solutions Logo" class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-4 bg-slate-900/60 border-t border-brand-border text-xs font-mono text-slate-400">
+                        PHP • JavaScript • Python • Bootstrap • MySQL
+                    </div>
+                </div>
+
+                <!-- App 6 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-rose-200/70 bg-rose-950/40 px-3 py-1 rounded-full border border-rose-500/20">Retail &amp; Finance</span>
+                            <span class="text-xs font-mono text-slate-500">Bangladesh</span>
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white mb-2">POS &amp; Installment Sales of Electronics</h3>
+                        
+                        <div class="flex items-end justify-between gap-4">
+                            <p class="text-slate-400 text-sm leading-relaxed flex-1">
+                                Commercial retail POS and installment payment management, inventory management, and warranty records for a large-scale Samsung dealer in Bangladesh.
+                            </p>
+                            
+                            <div class="w-12 h-12 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                                <img src="images/logo/logo-akt.png" alt="AK Traders Logo" class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-6 py-4 bg-slate-900/60 border-t border-brand-border text-xs font-mono text-slate-400">
+                        PHP •JavaScript •HTML •Bootstrap •MySQL
+                    </div>
+                </div>		
+            </div>
+        </div>
+    </section>
+
+    
+	<!-- Technical Writing & Insights Section  blog post starts here sep 19 2026 -->
+
+<section id="blog" class="py-12 max-w-5xl mx-auto px-6">
+  <!-- Section Header & Controls -->
+  <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+    <div>
+      <span class="text-xs font-mono text-sky-400 uppercase tracking-wider block mb-1">
+        Technical Writing &amp; Insights
+      </span>
+      <h2 class="text-2xl font-bold text-white">
+        Articles &amp; Engineering Publications
+      </h2>
+    </div>
+
+    <!-- Filter & Sort Controls -->
+    <div class="flex flex-wrap items-center gap-3">
+      <!-- Category Filter Dropdown -->
+      <div class="flex items-center gap-2">
+        <label for="blog-category-filter" class="text-xs font-mono text-slate-400">Category:</label>
+        <select id="blog-category-filter" onchange="filterAndSortBlogs()" class="bg-brand-card text-slate-200 text-xs font-mono border border-brand-border rounded-lg px-3 py-1.5 focus:outline-none focus:border-sky-500 cursor-pointer">
+          <option value="ALL">All Categories</option>
+          <!-- Options populated dynamically by JavaScript -->
+        </select>
+      </div>
+
+      <!-- Date Sort Order Dropdown -->
+      <div class="flex items-center gap-2">
+        <label for="blog-sort-order" class="text-xs font-mono text-slate-400">Sort:</label>
+        <select id="blog-sort-order" onchange="filterAndSortBlogs()" class="bg-brand-card text-slate-200 text-xs font-mono border border-brand-border rounded-lg px-3 py-1.5 focus:outline-none focus:border-sky-500 cursor-pointer">
+          <option value="NEWEST">Newest to Oldest</option>
+          <option value="OLDEST">Oldest to Newest</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Responsive Table Container -->
+  <div class="overflow-x-auto bg-brand-card rounded-2xl border border-brand-border shadow-xl">
+    <table class="w-full text-left border-collapse">
+      <!-- Table Header -->
+      <thead>
+        <tr class="border-b border-brand-border text-xs font-mono uppercase tracking-wider text-slate-400 bg-slate-900/50">
+          <th scope="col" class="py-4 px-6 w-32">Date</th>
+          <th scope="col" class="py-4 px-6 w-52">Category</th>
+          <th scope="col" class="py-4 px-6">Subject / Title</th>
+          <th scope="col" class="py-4 px-6 text-right w-36">Action</th>
+        </tr>
+      </thead>
+      
+      <!-- Table Body -->
+      <tbody id="blog-table-body" class="divide-y divide-brand-border/60 text-sm">
+        <!-- Rendered via JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Blog Filtering & Sorting Engine -->
+
+<script>
+  const blogPosts = [
+  
+  {
+      id: 20,
+      date: "2026-09-22",
+      dateFormatted: "Sep 22, 2026",
+      category: "Software Architecture",
+      title: "Discover key techniques for optimizing MySQL query performance in high-traffic PHP applications.",
+      url: "/blogs/bg20"
+    },
+	
+      {
+      id: 19,
+      date: "2026-09-22",
+      dateFormatted: "Sep 22, 2026",
+      category: "Software Architecture",
+      title: "Web application development security checklist for corporate compliance, data audits, and hardening backend systems.",
+      url: "/blogs/bg19"
+    },
+	   
+    {
+      id: 18,
+      date: "2026-09-22",
+      dateFormatted: "Sep 22, 2026",
+      category: "Software Architecture",
+      title: "Learn how to build lightweight, real-time dashboards with instantaneous UI updates using MySQL and JavaScript.",
+      url: "/blogs/bg18"
+    },
+	
+  
+    {
+      id: 17,
+      date: "2026-09-22",
+      dateFormatted: "Sep 22, 2026",
+      category: "Software Architecture",
+      title: "Enterprise-Grade Web Architecture: Custom PHP, JavaScript & MySQL Solutions.",
+      url: "/blogs/bg17"
+    },
+	      
+    {
+      id: 16,
+      date: "2026-09-22",
+      dateFormatted: "Sep 22, 2026",
+      category: "Software Engineering",
+      title: "Is Python Django Good for Business Web Apps? (Pros, Cons & Verdict).",
+      url: "/blogs/bg16"
+    },
+	
+	{
+      id: 15,
+      date: "2026-09-14",
+      dateFormatted: "Sep 14, 2026",
+      category: "Database Architecture",
+      title: "High-Concurrency local-first web architecture: 193 files, 65 user page yet zero lag. See how.",
+      url: "/blogs/bg15"
+    },
+	
+    {
+      id: 14,
+      date: "2026-09-13",
+      dateFormatted: "Sep 13, 2026",
+      category: "Desktop Database & VBA",
+      title: "The Role of an Enterprise Web Application Architect in Database Modernization.",
+      url: "/blogs/bg14"
+    },
+    {
+      id: 13,
+      date: "2026-09-12",
+      dateFormatted: "Sep 12, 2026",
+      category: "Desktop Database & VBA",
+      title: "Why Migrating Legacy VBA Macros to Python Is Essential for Enterprise Scale.",
+      url: "/blogs/bg13"
+    },
+    {
+      id: 12,
+      date: "2026-09-10",
+      dateFormatted: "Sep 10, 2026",
+      category: "Database Architecture",
+      title: "Enterprise SQLite WASM Local-First Sync Architecture.",
+      url: "/blogs/bg12"
+    },
+    {
+      id: 11,
+      date: "2026-09-08",
+      dateFormatted: "Sep 8, 2026",
+      category: "Database Architecture",
+      title: "Why Hybrid Database Architecture Is the Smartest Modernization Strategy for 2026.",
+      url: "/blogs/bg11"
+    },
+    {
+      id: 10,
+      date: "2026-09-07",
+      dateFormatted: "Sep 7, 2026",
+      category: "Database Architecture",
+      title: "Why Companies Still Depend on Microsoft Access to Run Core Operations Despite the Rise of Cloud-based Platforms.",
+      url: "/blogs/bg10"
+    },
+    {
+      id: 9,
+      date: "2026-09-04",
+      dateFormatted: "Sep 4, 2026",
+      category: "Database Architecture",
+      title: "Write Conflicts in Microsoft Access Front-end & Solutions",
+      url: "/blogs/bg9"
+    },
+    {
+      id: 8,
+      date: "2026-09-02",
+      dateFormatted: "Sep 2, 2026",
+      category: "Database Architecture",
+      title: "Microsoft Access Front-end with SQL Server Back-end: Common Issues & Solutions",
+      url: "/blogs/bg8"
+    },
+    {
+      id: 7,
+      date: "2026-08-31",
+      dateFormatted: "Aug 31, 2026",
+      category: "Desktop Database & VBA",
+      title: "Advanced Automation Tricks for Developers of Access 365",
+      url: "/blogs/bg7"
+    },
+    {
+      id: 6,
+      date: "2026-08-26",
+      dateFormatted: "Aug 26, 2026",
+      category: "SOFTWARE ARCHITECTURE",
+      title: "SQL Server Migration Best Practices: Strategies for Transferring Legacy Data Structures into Modern Web Application",
+      url: "/blogs/bg6"
+    },
+    {
+      id: 5,
+      date: "2026-08-20",
+      dateFormatted: "Aug 20, 2026",
+      category: "SOFTWARE ARCHITECTURE",
+      title: "Local-First vs. Cloud-Only Architecture: Why keeping data local-first improves enterprise application speed and uptime",
+      url: "/blogs/bg5"
+    },
+    {
+      id: 4,
+      date: "2026-08-16",
+      dateFormatted: "Aug 16, 2026",
+      category: "SOFTWARE ENGINEERING",
+      title: "The 5 Phases of Our High-Reliability Web Application Development Process",
+      url: "/blogs/bg4"
+    },
+    {
+      id: 3,
+      date: "2026-08-10",
+      dateFormatted: "Aug 10, 2026",
+      category: "SOFTWARE ARCHITECTURE",
+      title: "Disadvantages of Off-the-Shelf Software",
+      url: "/blogs/bg3"
+    },
+    {
+      id: 2,
+      date: "2026-08-05",
+      dateFormatted: "Aug 5, 2026",
+      category: "CUSTOMIZED ACCESS 365",
+      title: "Access 365 Automation Engine for ISO 9001",
+      url: "/blogs/bg2"
+    },
+    {
+      id: 1,
+      date: "2026-07-31",
+      dateFormatted: "Jul 31, 2026",
+      category: "SOFTWARE ARCHITECTURE",
+      title: "Local-First Web Application by DataCore Systems",
+      url: "/blogs/bg1"
+    }
+  ];
+
+  function populateCategories() {
+    const categorySelect = document.getElementById("blog-category-filter");
+    const categories = Array.from(new Set(blogPosts.map(p => p.category.trim().toUpperCase())));
+    
+    categories.forEach(cat => {
+      const option = document.createElement("option");
+      option.value = cat;
+      option.textContent = cat;
+      categorySelect.appendChild(option);
+    });
+  }
+
+  function renderBlogTable(posts) {
+    const tbody = document.getElementById("blog-table-body");
+    if (!posts || posts.length === 0) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="4" class="py-8 px-6 text-center text-slate-500 font-mono text-xs">
+            No articles found matching the selected category.
+          </td>
+        </tr>`;
+      return;
+    }
+
+    tbody.innerHTML = posts.map(post => `
+      <tr class="hover:bg-slate-800/40 transition-colors group">
+        <td class="py-4 px-6 font-mono text-slate-400 whitespace-nowrap text-xs">
+          ${post.dateFormatted}
+        </td>
+        <td class="py-4 px-6 whitespace-nowrap">
+          <span class="text-[10px] font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
+            ${post.category}
+          </span>
+        </td>
+        <td class="py-4 px-6 text-white font-medium group-hover:text-sky-300 transition-colors">
+          <a href="${post.url}" class="hover:text-sky-300 transition-colors">${post.title}</a>
+        </td>
+        <td class="py-4 px-6 text-right whitespace-nowrap">
+          <a href="${post.url}" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1.5 transition-colors">
+            Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </td>
+      </tr>
+    `).join("");
+  }
+
+  function filterAndSortBlogs() {
+    const selectedCategory = document.getElementById("blog-category-filter").value;
+    const sortOrder = document.getElementById("blog-sort-order").value;
+
+    let filtered = [...blogPosts];
+
+    if (selectedCategory !== "ALL") {
+      filtered = filtered.filter(post => post.category.trim().toUpperCase() === selectedCategory);
+    }
+
+    filtered.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return sortOrder === "NEWEST" ? dateB - dateA : dateA - dateB;
+    });
+
+    renderBlogTable(filtered);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    populateCategories();
+    filterAndSortBlogs();
+  });
+</script>	
+<!-- Technical Writing & Insights Section  blog post ENDS here sep 19 2026 -->
+	
+	
+	
+    <!-- Interactive ROI Calculator -->
+    <!-- <section id="calculator" class="py-20 px-6 border-b border-brand-border bg-slate-950/40">   -->
+	<section id="calculator" class="pt-10 pb-20 px-6 border-b border-brand-border bg-slate-950/40">
+	
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-3">Migration ROI Estimator</h2>
+                <p class="text-slate-400 text-sm">Estimate monthly cost savings from modernizing legacy software to optimized web systems.</p>
+            </div>
+
+            <div class="bg-brand-card p-8 rounded-2xl border border-brand-border grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Active Users On Legacy System: <span id="userVal" class="text-sky-400 font-bold">15</span></label>
+                        <input type="range" id="users" min="5" max="100" value="15" oninput="calculateSavings()" class="w-full accent-sky-500 bg-slate-800 rounded-lg h-2 cursor-pointer">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Hours Lost Per User/Week to Bugs/Lag: <span id="hoursVal" class="text-sky-400 font-bold">4</span> hrs</label>
+                        <input type="range" id="hours" min="1" max="15" value="4" oninput="calculateSavings()" class="w-full accent-sky-500 bg-slate-800 rounded-lg h-2 cursor-pointer">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono uppercase text-slate-400 mb-2">Avg. Hourly Employee Rate: $<span id="rateVal" class="text-sky-400 font-bold">35</span>/hr</label>
+                        <input type="range" id="rate" min="20" max="100" value="35" step="5" oninput="calculateSavings()" class="w-full accent-sky-500 bg-slate-800 rounded-lg h-2 cursor-pointer">
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 text-center space-y-4">
+                    <span class="text-xs font-mono text-slate-500 uppercase tracking-widest block">Estimated Monthly Productivity Reclaimed</span>
+                    <div id="result" class="text-4xl md:text-5xl font-extrabold text-emerald-400 font-mono">$8,400</div>
+                    <p class="text-xs text-slate-400">Based on standard 4-week work months and improved system response velocity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <!-- <footer id="contact" class="py-20 px-6 border-t border-brand-border bg-brand-dark">   --> 
+	<footer id="contact" class="pt-10 pb-20 px-6 border-t border-brand-border bg-brand-dark">
+	
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's Discuss Your Project</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Send a message below or reach out directly for custom application development, local-first web apps, and database migrations.</p>
+            </div>
+
+            <!-- Contact Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-5xl mx-auto mb-16">
+                
+                <!-- Left Column: Direct Quick Contact Info -->
+                <div class="lg:col-span-5 bg-brand-card p-8 rounded-2xl border border-brand-border space-y-6">
+                    <h3 class="text-xl font-bold text-white mb-4">Direct Touchpoints</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Business Address</span>
+                            <p class="text-slate-300 text-sm font-medium mt-1 leading-relaxed">
+                                <i class="fa-solid fa-location-dot text-sky-400 mr-1.5"></i> 
+                                Road 6, Sector 6, Uttara Model Town, Dhaka - 1230, Bangladesh
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Email Address</span>
+                            <div class="flex items-center gap-2 mt-1">
+                                <a href="mailto:devmomtaz@gmail.com" class="text-sky-400 hover:text-sky-300 font-semibold text-base transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope"></i> devmomtaz@gmail.com
+                                </a>
+                                <button onclick="copyEmailToClipboard()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-2 py-1 rounded transition-colors" title="Copy Email">
+                                    <i class="fa-regular fa-copy" id="copyIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Service Area</span>
+                            <p class="text-slate-300 text-sm font-medium mt-1">
+                                <i class="fa-solid fa-globe text-sky-400 mr-1.5"></i> Internationally (Open for US &amp; Global Remote Contracts)
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider font-mono">Contract Rate</span>
+                            <p class="text-emerald-400 text-sm font-semibold mt-1"><i class="fa-solid fa-tag text-xs"></i> $40 / hour</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Instant Web Form -->
+                <div class="lg:col-span-7 bg-brand-card p-8 rounded-2xl border border-brand-border">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="clientName" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                                <input type="text" id="clientName" required placeholder="e.g. John Doe" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-sky-500 transition-colors">
+                            </div>
+                            <div>
+                                <label for="clientEmail" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
+                                <input type="email" id="clientEmail" required placeholder="e.g. john@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-sky-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="projectScope" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Project Scope / Details</label>
+                            <textarea id="projectScope" rows="4" required placeholder="Describe your database or web application project requirements..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-sky-500 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3.5 px-6 rounded-lg transition-all shadow-md shadow-sky-600/20 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+
+                    <!-- Success State Notice (Hidden by default) -->
+                    <div id="formSuccess" class="hidden text-center py-8 space-y-3">
+                        <div class="w-12 h-12 bg-emerald-950 text-emerald-400 border border-emerald-800/50 rounded-full flex items-center justify-center mx-auto text-xl">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Message Received!</h4>
+                        <p class="text-sm text-slate-400">Thank you for reaching out, Momtaz U will review your message and reply promptly.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Note -->
+            <div class="pt-12 border-t border-brand-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.</p>
+                <p>Designed for High Reliability &amp; Zero Downtime.</p>
+            </div>
+        </div>
+
+        <!-- Script for Calculator, Clipboard, Form Handling, and Universal Back to Top Scroll -->
+        <script>
+            function calculateSavings() {
+                const users = parseInt(document.getElementById('users').value);
+                const hours = parseInt(document.getElementById('hours').value);
+                const rate = parseInt(document.getElementById('rate').value);
+
+                document.getElementById('userVal').innerText = users;
+                document.getElementById('hoursVal').innerText = hours;
+                document.getElementById('rateVal').innerText = rate;
+
+                const totalMonthlySavings = users * hours * rate * 4;
+                document.getElementById('result').innerText = '$' + totalMonthlySavings.toLocaleString();
+            }
+
+            function copyEmailToClipboard() {
+                navigator.clipboard.writeText('devmomtaz@gmail.com').then(() => {
+                    const icon = document.getElementById('copyIcon');
+                    icon.className = 'fa-solid fa-check text-emerald-400';
+                    setTimeout(() => {
+                        icon.className = 'fa-regular fa-copy';
+                    }, 2500);
+                });
+            }
+
+            function handleFormSubmit(e) {
+                e.preventDefault();
+                const form = document.getElementById('contactForm');
+                const successMsg = document.getElementById('formSuccess');
+                
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            }
+
+            // Universal Scroll Detection for Back to Top Button
+            function toggleBackToTop() {
+                const btn = document.getElementById('backToTopBtn');
+                if (!btn) return;
+
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+                if (scrollTop > 150) {
+                    btn.style.setProperty('display', 'flex', 'important');
+                } else {
+                    btn.style.setProperty('display', 'none', 'important');
+                }
+            }
+
+            // Attach scroll listeners to catch any scrolling context
+            window.addEventListener('scroll', toggleBackToTop, true);
+            document.addEventListener('scroll', toggleBackToTop, true);
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+			
+			document.getElementById("current-year").textContent = new Date().getFullYear();
+			
+        </script>
+    </footer>
+
+    <!-- Floating Back to Top Button Element -->
+    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+</body>
+</html>
