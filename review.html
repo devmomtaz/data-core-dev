@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Reviews & Testimonials | DataCore Systems</title>
+   
+    <!-- Canonical URL -->
+    "https://data-core.dev/review.html">
+    <!-- Open Graph / Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DataCore Systems">
+    <meta property="og:url" content="https://data-core.dev/review.html">
+    <meta property="og:title" content="Client Reviews | DataCore Systems">
+    <meta property="og:description" content="Read client reviews and testimonials regarding custom web applications, database migrations, and local-first architecture.">
+    <meta property="og:image" content="https://data-core.dev/og-banner.png">
+    <meta property="article:author" content="Momtaz U">
+
+    <!-- Favicon Integration -->
+    <link rel="icon" type="image/x-icon" href="favicon-32.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2.png">
+    <link rel="apple-touch-icon" href="favicon-v2.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0B0F17',
+                            card: '#111827',
+                            border: '#1F2937',
+                            accent: '#0284C7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Global CSS & Back to Top Styling -->
+    <style>
+        html, body {
+            background-color: #0B0F17;
+            color: #F3F4F6;
+            margin: 0;
+            padding: 0;
+            overflow-x: clip;
+        }
+
+        #backToTopBtn {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            z-index: 999999 !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50% !important;
+            background-color: #034068 !important;
+            color: #ffffff !important;
+            border: 2px solid rgba(125, 211, 252, 0.5) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+            cursor: pointer !important;
+            display: none;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.2s ease, background-color 0.2s ease !important;
+        }
+
+        #backToTopBtn:hover {
+            transform: scale(1.1) !important;
+            background-color: #02568f !important;
+        }
+
+        #backToTopBtn svg {
+            width: 24px;
+            height: 24px;
+            stroke: #ffffff;
+            stroke-width: 3;
+            fill: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-sky-500 selection:text-white relative">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="group relative flex items-center gap-3 py-2">
+                <img src="favicon-v2.png" alt="DataCore Systems Logo" class="w-10 h-10 object-contain drop-shadow-md">
+                <div>
+                    <span class="text-xl font-bold text-white tracking-tight">DataCore <span class="text-[#16BEDC]">Systems</span></span>
+                    <span class="text-[11px] font-sans font-semibold text-emerald-400 tracking-wider uppercase block -mt-0.5 opacity-90 hover:text-emerald-300 transition-colors">
+                        Enterprise Software &amp; Systems Architecture
+                    </span>
+                </div>
+
+                <div class="hidden group-hover:block absolute top-full left-0 mt-2 z-50 w-64 p-4 bg-brand-card rounded-2xl border border-sky-500/50 shadow-2xl shadow-sky-500/10 backdrop-blur-lg transition-all duration-200">
+                    <img src="logo-v2.png" alt="DataCore Systems Full Logo" class="w-full h-auto object-contain mx-auto rounded-lg">
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-300">
+                <a href="index.html#about" class="hover:text-sky-400 transition-colors">Overview</a>
+                <a href="index.html#skills" class="hover:text-sky-400 transition-colors">Stack</a>
+                <a href="index.html#projects" class="hover:text-sky-400 transition-colors">Featured Systems</a>
+                <a href="index.html#team" class="hover:text-sky-400 transition-colors">Our Team</a>
+
+                <div style="position: relative; display: inline-block;" 
+                     onmouseenter="this.querySelector('.nav-dropdown-menu').style.display='block'" 
+                     onmouseleave="this.querySelector('.nav-dropdown-menu').style.display='none'">
+                  
+                  <a href="index.html#services" class="text-slate-400 no-underline p-2 inline-block hover:text-sky-400 transition-colors">
+                    Services ▾
+                  </a>
+                    
+                  <div class="nav-dropdown-menu" 
+                       style="display: none; position: absolute; top: 100%; left: 0; background-color: #0b1120; min-width: 220px; border: 1px solid #1e293b; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 9999; padding: 6px 0;">
+                    <a href="srvweb.html" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Web Application</a>
+                    <a href="srvloc.html" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Local-first Web Application</a>
+                    <a href="srvmob.html" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Mobile Application</a>
+                    <a href="srvdm.html" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Database Migration</a>
+                    <a href="srvdesk.html" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Desktop Software</a>
+                    <a href="srvvba.html" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">VBA automation</a>
+                  </div>
+                </div>
+
+                <a href="index.html#portfolio" class="hover:text-sky-400 transition-colors">Portfolio</a>
+               <!--  <a href="review.html" class="text-sky-400 font-semibold transition-colors">Reviews</a>  -->
+                <a href="index.html#blog" class="hover:text-sky-400 transition-colors">Blog</a>
+                <a href="#calculator" class="hover:text-sky-400 transition-colors">ROI</a>
+                <a href="index.html#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title & Header Section -->
+    <section class="pt-12 pb-8 px-6 border-b border-brand-border bg-slate-950/40">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="text-xs font-mono text-sky-400 uppercase tracking-wider block mb-2">Verified Client Testimonials</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Enterprise Success &amp; Client Feedback</h1>
+            <p class="text-slate-400 max-w-2xl mx-auto mt-4 text-sm md:text-base leading-relaxed">
+                Here is what long-term corporate clients and business leaders say about our database architectures, migrations, and local-first application developments.
+            </p>
+            
+            <!-- Submit Review Modal Trigger -->
+            <div class="mt-8">
+                <button onclick="openReviewModal()" class="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-semibold rounded-xl shadow-lg shadow-sky-600/20 transition-all border border-sky-400/30">
+                    <i class="fa-solid fa-pen-to-square"></i> Leave a Client Review
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Reviews Grid Section -->
+    <section class="py-16 px-6 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto">
+            <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Loaded dynamically from reviews.json -->
+                <div class="col-span-full text-center py-12 text-slate-500">
+                    <i class="fa-solid fa-spinner fa-spin text-2xl mb-2"></i>
+                    <p class="text-xs font-mono">Loading client reviews...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Submission Popup Modal -->
+    <div id="reviewModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[99999] hidden flex items-center justify-center p-4">
+        <div class="bg-brand-card border border-brand-border rounded-2xl w-full max-w-lg p-6 shadow-2xl relative">
+            <button onclick="closeReviewModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="text-xl font-bold text-white mb-1">Submit a Testimonial</h3>
+            <p class="text-xs text-slate-400 mb-6">Your feedback will be sent directly to Momtaz U for publication approval.</p>
+
+            <form id="reviewForm" onsubmit="handleReviewSubmit(event)" class="space-y-4">
+                <!-- Replace with your free key from https://web3forms.com -->
+                <input type="hidden" name="access_key" value="e083d6de-84e0-4440-9e53-7954e167f0ea">
+                <input type="hidden" name="subject" value="New Website Client Review">
+
+                <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Company / Client Name *</label>
+                    <input type="text" name="company" required placeholder="e.g. Acme Corp" class="w-full bg-slate-900 border border-brand-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Location *</label>
+                    <input type="text" name="location" required placeholder="e.g. Florida, USA" class="w-full bg-slate-900 border border-brand-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Project / System Delivered *</label>
+                    <input type="text" name="role" required placeholder="e.g. Database Migration &amp; Web App" class="w-full bg-slate-900 border border-brand-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Your Review / Testimonial *</label>
+                    <textarea name="review" rows="4" required placeholder="Share your experience working on this system..." class="w-full bg-slate-900 border border-brand-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500"></textarea>
+                </div>
+
+                <!-- Feedback Message Container -->
+                <div id="formResponse" class="hidden text-xs text-center p-3 rounded-lg font-mono"></div>
+
+                <button id="submitBtn" type="submit" class="w-full py-3 bg-sky-600 hover:bg-sky-500 text-white font-semibold rounded-lg transition-all shadow-md flex items-center justify-center gap-2">
+                    <span>Submit Testimonial</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="pt-10 pb-20 px-6 border-t border-brand-border bg-brand-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="pt-12 border-t border-brand-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.</p>
+                <p>Designed for High Reliability &amp; Zero Downtime.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Global Scripts -->
+    <script>
+        // Modal Controls
+        function openReviewModal() {
+            document.getElementById('reviewModal').classList.remove('hidden');
+        }
+
+        function closeReviewModal() {
+            document.getElementById('reviewModal').classList.add('hidden');
+        }
+
+        // Custom AJAX Form Handler
+        async function handleReviewSubmit(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('reviewForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const responseContainer = document.getElementById('formResponse');
+            const formData = new FormData(form);
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+            responseContainer.classList.add('hidden');
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    responseContainer.className = "text-xs text-center p-3 rounded-lg font-mono bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 block";
+                    responseContainer.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> Thank you! Your review has been submitted successfully and sent for approval.`;
+                    
+                    form.reset();
+
+                    setTimeout(() => {
+                        closeReviewModal();
+                        responseContainer.classList.add('hidden');
+                    }, 3500);
+                } else {
+                    throw new Error(result.message || 'Submission failed');
+                }
+            } catch (error) {
+                responseContainer.className = "text-xs text-center p-3 rounded-lg font-mono bg-rose-950/80 border border-rose-500/50 text-rose-300 block";
+                responseContainer.innerHTML = `<i class="fa-solid fa-circle-exclamation text-rose-400 mr-1"></i> Submission failed. Please try again or reach out directly via email.`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Testimonial';
+            }
+        }
+
+        // Dynamic JSON Fetching for Testimonials
+        async function loadReviews() {
+            const gridContainer = document.getElementById('reviews-grid');
+            
+            try {
+                const response = await fetch('reviews.json');
+                if (!response.ok) throw new Error('Failed to load reviews');
+                
+                const reviews = await response.json();
+                gridContainer.innerHTML = ''; // Clear loading spinner
+
+                reviews.forEach(item => {
+                    const stars = Array.from({ length: item.rating || 5 }, () => '<i class="fa-solid fa-star"></i>').join('');
+
+                    const cardHTML = `
+                        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all shadow-xl">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="text-amber-400 text-sm space-x-1">${stars}</div>
+                                    <span class="text-xs font-mono text-slate-500">${item.location}</span>
+                                </div>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">
+                                    "${item.review}"
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-brand-border/60 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-slate-800 border border-brand-border p-1 flex items-center justify-center shrink-0">
+                                    <img src="${item.logo}" alt="${item.company} Logo" class="w-full h-full object-contain" onError="this.src='favicon-v2.png'">
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">${item.company}</h4>
+                                    <span class="text-xs font-mono text-slate-400">${item.role}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    gridContainer.insertAdjacentHTML('beforeend', cardHTML);
+                });
+            } catch (error) {
+                console.error('Error fetching reviews:', error);
+                gridContainer.innerHTML = `<p class="text-slate-400 text-center col-span-full">Unable to load testimonials at this time.</p>`;
+            }
+        }
+
+        // Scroll & Back to Top Handlers
+        function toggleBackToTop() {
+            const btn = document.getElementById('backToTopBtn');
+            if (!btn) return;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if (scrollTop > 150) {
+                btn.style.setProperty('display', 'flex', 'important');
+            } else {
+                btn.style.setProperty('display', 'none', 'important');
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', toggleBackToTop, true);
+        document.addEventListener('DOMContentLoaded', () => {
+            loadReviews();
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

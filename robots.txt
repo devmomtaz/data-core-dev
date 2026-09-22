@@ -1,0 +1,9 @@
+# Allow all major search engine crawlers
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+
+# Direct crawlers to your XML sitemap
+Sitemap: https://data-core.dev/sitemap.xml

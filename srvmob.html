@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  <title>Cross-Platform Mobile App Development with Flutter (iOS & Android) | DataCore Systems</title>
+  <meta name="description" content="Custom Flutter mobile apps for Android and iOS with native performance, local-first offline storage, and seamless background cloud synchronization.">
+  <!-- Favicon Integration final Sep 8 -->
+<link rel="icon" type="image/x-icon" href="favicons-32.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> 
+ 
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="canonical" href="https://data-core.dev/srvmob" />
+<!-- Open Graph / Social Media Preview Meta Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://data-core.dev/srvmob" />
+<meta property="og:title" content="Flutter Mobile App Developer | Native Android & iOS Solutions | DataCore Systems" />
+<meta property="og:description" content="Build fast, responsive mobile applications with offline-first capabilities, local database sync, and unified codebase efficiency for enterprise users.">
+<meta property="og:image" content="https://data-core.dev/images/blogs/og-srvmob.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://data-core.dev/srvmob" />
+<meta name="twitter:title" content="Custom Offline-First Mobile Apps Built with Flutter | DataCore Systems" />
+<meta name="twitter:description" content="Deliver native-like speed on Android & iOS. Features offline data collection with automatic cloud synchronization when online.">
+<meta name="twitter:image" content="https://data-core.dev/images/blogs/og-srvmob.png" />
+
+<!-- JSON-LD Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Cross-Platform Mobile App Development with Flutter",
+  "provider": {
+    "@type": "Organization",
+    "name": "DataCore Systems",
+    "url": "https://data-core.dev",
+    "logo": "https://data-core.dev/favicon-192x192.png"
+  },
+  "description": "High-performance cross-platform mobile application development using Flutter for iOS and Android, featuring offline-first local storage and automatic cloud synchronization.",
+  "url": "https://data-core.dev/srvmob"
+}
+</script>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            'brand-bg': '#070b14',
+            'brand-card': '#0b1120',
+            'brand-border': '#1e293b',
+            brand: {
+              dark: '#0B0F17',
+              card: '#111827',
+              border: '#1F2937',
+              accent: '#0284C7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-bg text-slate-300 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Header Logo with Hover Preview Card -->
+            <a href="index" class="group relative flex items-center gap-3 py-2">
+                <img src="favicon-v2.png" alt="DataCore Systems Logo" class="w-10 h-10 object-contain drop-shadow-md">
+                <div>
+                    <span class="text-xl font-bold text-white tracking-tight">DataCore <span class="text-[#16BEDC]">Systems</span></span>
+                    
+                    <span class="text-[11px] font-sans font-semibold text-emerald-400 tracking-wider uppercase block -mt-0.5 opacity-90 hover:text-emerald-300 transition-colors">
+                        Enterprise Software &amp; Systems Architecture
+                    </span>
+                </div>
+
+                <!-- Hover Popup Card -->
+                <div class="hidden group-hover:block absolute top-full left-0 mt-2 z-50 w-64 p-4 bg-brand-card rounded-2xl border border-sky-500/50 shadow-2xl shadow-sky-500/10 backdrop-blur-lg transition-all duration-200">
+                    <img src="logo-v2.png" alt="DataCore Systems Full Logo" class="w-full h-auto object-contain mx-auto rounded-lg">
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-300">
+                <a href="/#about" class="hover:text-sky-400 transition-colors">Overview</a>
+                <a href="/#skills" class="hover:text-sky-400 transition-colors">Stack</a>
+                <a href="/#projects" class="hover:text-sky-400 transition-colors">Featured Systems</a>
+                <a href="/#team" class="hover:text-sky-400 transition-colors">Our Team</a>
+
+                <div style="position: relative; display: inline-block;" 
+                     onmouseenter="this.querySelector('.nav-dropdown-menu').style.display='block'" 
+                     onmouseleave="this.querySelector('.nav-dropdown-menu').style.display='none'">
+                  
+                  <!-- Main Services Link -->
+           <a href="/#services" class="text-slate-400 no-underline p-2 inline-block hover:text-sky-400 transition-colors">
+  Services ▾
+</a>
+
+                  <!-- Dropdown Popup -->
+                  <div class="nav-dropdown-menu" 
+                       style="display: none; position: absolute; top: 100%; left: 0; background-color: #0b1120; min-width: 220px; border: 1px solid #1e293b; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 9999; padding: 6px 0;">
+                   <a href="/srvweb" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Web Application</a>
+                    <a href="/srvloc" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Local-first Web Application</a>
+                    <a href="/srvmob" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Mobile Application</a>
+                    <a href="/srvdm" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Database Migration</a>
+                    <a href="/srvdesk" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Desktop Software Engineering</a>
+                    <a href="/srvvba" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Custom VBA Automation</a>
+					
+                  </div>
+                </div>
+                <a href="/#portfolio" class="hover:text-sky-400 transition-colors">Portfolio</a>
+                <a href="/#blog" class="hover:text-sky-400 transition-colors">Blog</a>
+                <a href="/#calculator" class="hover:text-sky-400 transition-colors">ROI</a>
+                <a href="/#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="pt-8 pb-10 px-6 border-b border-brand-border relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-500/5 to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto text-center relative z-10">
+      <span class="text-xs font-mono text-sky-400 bg-sky-950/80 px-3 py-1 rounded-full border border-sky-800/50 uppercase tracking-widest">
+        Enterprise Mobility Solutions
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mt-3 mb-3 tracking-tight">
+        Custom Mobile Applications
+      </h1>
+      <p class="text-slate-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+        High-performance, secure cross-platform mobile solutions seamlessly integrated with core operational backends, real-time sync engines, and field data workflows.
+      </p>
+    </div>
+  </section>
+
+  <!-- Highlight Section -->
+  <section class="pt-10 pb-12 px-6 border-b border-brand-border bg-slate-950/60">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-brand-card rounded-2xl border border-sky-500/30 p-8 shadow-2xl relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div class="lg:w-2/3">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 text-xs font-mono border border-sky-500/20 font-semibold">FIELD-READY MOBILITY</span>
+              <span class="text-xs text-slate-400 font-mono">Enterprise Backend Integration</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">
+              Seamless Operational Extension to the Field
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Connecting back-office systems directly to on-the-ground mobile interfaces. Designed to allow field teams to capture critical operational data, manage workflows, and inspect records with offline support.
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Built with progressive web technologies and cross-platform frameworks to guarantee fast performance, low memory usage, and direct interaction with central SQL databases.
+            </p>
+          </div>
+          <div class="lg:w-1/3 bg-brand-bg/80 border border-brand-border p-5 rounded-xl font-mono text-xs w-full">
+            <div class="text-slate-400 mb-2 border-b border-brand-border pb-2 font-semibold text-slate-200 flex justify-between">
+              <span>Mobility Specs</span>
+              <span class="text-sky-400">Cross-Platform</span>
+            </div>
+            <ul class="space-y-2 text-slate-300">
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Target Platforms:</span>
+                <span>iOS &amp; Android</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Sync Mechanism:</span>
+                <span>REST / Websockets</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Offline Cache:</span>
+                <span>Local DB / Storage</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Backend Integration:</span>
+                <span>Direct DB Connectors</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Mobile Solutions Section -->
+  <section class="pt-12 pb-20 px-6 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-white mb-3">Mobile Application Capabilities</h2>
+        <p class="text-slate-400 text-sm">Purpose-built mobile utilities engineered for reliability, data accuracy, and user efficiency in demanding work environments.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            📱
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Cross-Platform Apps</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Unified codebases delivering native-like speed on both Android and iOS devices, drastically reducing development overhead and maintenance cost.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">iOS &amp; Android</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">PWA</span>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            🔄
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Offline Field Data Capture</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Keep remote employees productive in areas with low or zero connectivity. Information is logged locally and synced once network access returns.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Offline Store</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Auto Sync</span>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            🔐
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Enterprise API Integration</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Direct interface connection with central relational databases (MySQL, SQL Server) through encrypted API endpoints and secure authentication headers.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Secure APIs</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Role Auth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Spec & Architecture -->
+  <section class="pt-10 pb-20 px-6 border-b border-brand-border bg-slate-950/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-white mb-4">Robust Mobile Engineering Standard</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Mobile apps engineered at DataCore Systems focus heavily on low bandwidth consumption, optimized memory footprint, and reliable error recovery during transmission.
+        </p>
+        <ul class="space-y-3 text-sm text-slate-300 font-mono">
+          <li class="flex items-center gap-2"><span class="text-sky-400">✓</span> Light-weight client UI optimized for rapid touch responses</li>
+          <li class="flex items-center gap-2"><span class="text-sky-400">✓</span> Robust REST API architecture with token authentication</li>
+          <li class="flex items-center gap-2"><span class="text-sky-400">✓</span> Real-time data validation before syncing to main servers</li>
+        </ul>
+      </div>
+      <div class="md:w-1/2 bg-brand-card p-6 rounded-2xl border border-brand-border w-full font-mono text-xs">
+        <div class="flex items-center gap-2 mb-4 border-b border-brand-border pb-3">
+          <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+          <span class="text-slate-500 ml-2">mobile-app-spec.json</span>
+        </div>
+        <pre class="text-sky-300 overflow-x-auto"><code>{
+  <span class="text-slate-400">"service"</span>: <span class="text-emerald-400">"Enterprise Mobile Applications"</span>,
+  <span class="text-slate-400">"platform"</span>: <span class="text-emerald-400">"Cross-Platform / PWA / Hybrid"</span>,
+  <span class="text-slate-400">"backend_sync"</span>: <span class="text-emerald-400">"RESTful API &amp; WebSockets"</span>,
+  <span class="text-slate-400">"tech_stack"</span>: [
+    <span class="text-emerald-400">"JavaScript"</span>, <span class="text-emerald-400">"HTML5/CSS3"</span>, <span class="text-emerald-400">"PHP / Python Backend"</span>, 
+    <span class="text-emerald-400">"MySQL"</span>, <span class="text-emerald-400">"SQL Server"</span>
+  ]
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact Footer -->
+  <footer id="contact" class="pt-10 pb-20 px-6 bg-brand-bg text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Extend Your Operations to Mobile?</h2>
+      <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+        Let's discuss how mobile interfaces can connect your field personnel directly to your core system backends.
+      </p>
+      <a href="/#contact" class="inline-flex items-center px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-sky-500/20">
+        Initiate Mobile Discussion
+      </a>
+    </div>
+  
+    <div class="max-w-7xl mx-auto">
+      <div class="pt-12 border-t border-brand-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.</p>
+        <p>Designed for High Reliability &amp; Zero Downtime.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

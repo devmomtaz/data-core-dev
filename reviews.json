@@ -1,0 +1,26 @@
+[
+  {
+    "company": "Custom Liquid Solutions LLC",
+    "location": "Florida, USA",
+    "role": "Warehouse & Logistics System",
+    "logo": "images/logo/logo-custom.png",
+    "rating": 5,
+    "review": "Momtaz engineered our entire local-first web application for warehouse management and order processing. Data stability and real-time offline availability have been flawless."
+  },
+  {
+    "company": "UAS of America, Inc.",
+    "location": "Florida, USA",
+    "role": "Database Migration & Reporting",
+    "logo": "images/logo/uas-logos.png",
+    "rating": 5,
+    "review": "The database migration from legacy Access files into SQL Server with custom ISO 9001 reporting was handled seamlessly. Outstanding expertise in complex data pipelines."
+  },
+  {
+    "company": "American Best Care Transportation",
+    "location": "California, USA",
+    "role": "Dispatch Management Web App",
+    "logo": "images/logo/best-care.png",
+    "rating": 5,
+    "review": "Built a reliable web platform for managing medical transport schedules and employee dispatching. Highly responsive team and precise implementation."
+  }
+]

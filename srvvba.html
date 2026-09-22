@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  <title>Custom Excel & Access VBA Automation Services | DataCore Systems</title>
+  <meta name="description" content="Streamline business workflows with custom VBA macros, Excel automation, MS Access database integration, automated reporting, and userform solutions.">
+  
+  <!-- Favicon Integration final Sep 8 -->
+<link rel="icon" type="image/x-icon" href="favicons-32.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> 
+   
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://data-core.dev/srvvba" />
+  <!-- Open Graph / Social Media Preview Meta Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://data-core.dev/srvvba" />
+<meta property="og:title" content="VBA Macro Development & Office Process Automation | DataCore Systems" />
+<meta property="og:description" content="Eliminate manual spreadsheet tasks. Expert engineering for complex Excel formulas, Access backend connections, automated data entry, and custom reporting tools.">
+<meta property="og:image" content="https://data-core.dev/images/blogs/og-srvvba.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://data-core.dev/srvvba" />
+<meta name="twitter:title" content="Enterprise Excel & MS Access VBA Solutions | DataCore Systems" />
+<meta name="twitter:description" content="Boost business efficiency with automated spreadsheets, custom userforms, data extraction scripts, and seamless Office-to-SQL database integrations." />
+<meta name="twitter:image" content="https://data-core.dev/images/blogs/og-srvvba.png" />
+
+<!-- JSON-LD Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom VBA Automation",
+  "provider": {
+    "@type": "Organization",
+    "name": "DataCore Systems",
+    "url": "https://data-core.dev",
+    "logo": "https://data-core.dev/favicon-192x192.png"
+  },
+  "description": "Transform repetitive Office tasks into single-click automated workflows with robust VBA scripts, and cross-application integration.",
+  "url": "https://data-core.dev/srvvba"
+}
+</script>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            'brand-bg': '#070b14',
+            'brand-card': '#0b1120',
+            'brand-border': '#1e293b',
+            brand: {
+              dark: '#0B0F17',
+              card: '#111827',
+              border: '#1F2937',
+              accent: '#0284C7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-bg text-slate-300 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Header Logo with Hover Preview Card -->
+            <a href="index" class="group relative flex items-center gap-3 py-2">
+                <img src="favicon-v2.png" alt="DataCore Systems Logo" class="w-10 h-10 object-contain drop-shadow-md">
+                <div>
+                    <span class="text-xl font-bold text-white tracking-tight">DataCore <span class="text-[#16BEDC]">Systems</span></span>
+                    
+                    <span class="text-[11px] font-sans font-semibold text-emerald-400 tracking-wider uppercase block -mt-0.5 opacity-90 hover:text-emerald-300 transition-colors">
+                        Enterprise Software &amp; Systems Architecture
+                    </span>
+                </div>
+
+                <!-- Hover Popup Card -->
+                <div class="hidden group-hover:block absolute top-full left-0 mt-2 z-50 w-64 p-4 bg-brand-card rounded-2xl border border-sky-500/50 shadow-2xl shadow-sky-500/10 backdrop-blur-lg transition-all duration-200">
+                    <img src="logo-v2.png" alt="DataCore Systems Full Logo" class="w-full h-auto object-contain mx-auto rounded-lg">
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-300">
+                <a href="/#about" class="hover:text-sky-400 transition-colors">Overview</a>
+                <a href="/#skills" class="hover:text-sky-400 transition-colors">Stack</a>
+                <a href="/#projects" class="hover:text-sky-400 transition-colors">Featured Systems</a>
+                <a href="/#team" class="hover:text-sky-400 transition-colors">Our Team</a>
+
+                <div style="position: relative; display: inline-block;" 
+                     onmouseenter="this.querySelector('.nav-dropdown-menu').style.display='block'" 
+                     onmouseleave="this.querySelector('.nav-dropdown-menu').style.display='none'">
+                  
+                  <!-- Main Services Link -->
+                  <a href="/#services" class="text-slate-400 no-underline p-2 inline-block hover:text-sky-400 transition-colors">
+  Services ▾
+</a>
+
+
+                  <!-- Dropdown Popup -->
+                  <div class="nav-dropdown-menu" 
+                       style="display: none; position: absolute; top: 100%; left: 0; background-color: #0b1120; min-width: 220px; border: 1px solid #1e293b; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 9999; padding: 6px 0;">
+                  <a href="/srvweb" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Web Application</a>
+                    <a href="/srvloc" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Local-first Web Application</a>
+                    <a href="/srvmob" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Mobile Application</a>
+                    <a href="/srvdm" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Database Migration</a>
+                    <a href="/srvdesk" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Desktop Software Engineering</a>
+                    <a href="/srvvba" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Custom VBA Automation</a>
+                  </div>
+                </div>
+                <a href="/#portfolio" class="hover:text-sky-400 transition-colors">Portfolio</a>
+                <a href="/#blog" class="hover:text-sky-400 transition-colors">Blog</a>
+                <a href="/#calculator" class="hover:text-sky-400 transition-colors">ROI</a>
+                <a href="/#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="pt-8 pb-10 px-6 border-b border-brand-border relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-500/5 to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto text-center relative z-10">
+      <span class="text-xs font-mono text-sky-400 bg-sky-950/80 px-3 py-1 rounded-full border border-sky-800/50 uppercase tracking-widest">
+        Enterprise Office &amp; Workflow Automation
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mt-3 mb-3 tracking-tight">
+        Custom VBA Automation
+      </h1>
+      <p class="text-slate-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+        Transform repetitive Office manual processes into automated, single-click workflows using robust Visual Basic for Applications (VBA), ADO database connectors, and cross-application integration.
+      </p>
+    </div>
+  </section>
+
+  <!-- Highlight Section -->
+  <section class="pt-10 pb-12 px-6 border-b border-brand-border bg-slate-950/60">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-brand-card rounded-2xl border border-sky-500/30 p-8 shadow-2xl relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div class="lg:w-2/3">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 text-xs font-mono border border-sky-500/20 font-semibold">OFFICE SYSTEM INTEGRATION</span>
+              <span class="text-xs text-slate-400 font-mono">Excel / Access / SQL / Outlook</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">
+              Streamline Operations &amp; Eliminate Manual Data Entry
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Stop spending hours copying data across workbooks or manually dispatching email attachments. We write custom VBA automation macros to bridge Excel, Word, Outlook, Access, and SQL Server databases into unified automated pipelines.
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              From error-checked data entry UserForms to automated document dispatch and complex report consolidation, our solutions run smoothly with zero reliance on extra external software licenses.
+            </p>
+          </div>
+          <div class="lg:w-1/3 bg-brand-bg/80 border border-brand-border p-5 rounded-xl font-mono text-xs w-full">
+            <div class="text-slate-400 mb-2 border-b border-brand-border pb-2 font-semibold text-slate-200 flex justify-between">
+              <span>Automation Specs</span>
+              <span class="text-sky-400">Native Office</span>
+            </div>
+            <ul class="space-y-2 text-slate-300">
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Language:</span>
+                <span>Visual Basic for Applications</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Data Access:</span>
+                <span>ADO / DAO / ODBC</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Output Formats:</span>
+                <span>Excel, Word, PDF, Email</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-slate-400">Execution Speed:</span>
+                <span>Optimized &amp; Refactored</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Capabilities Grid -->
+  <section class="pt-12 pb-20 px-6 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-white mb-3">Custom VBA Automation Services</h2>
+        <p class="text-slate-400 text-sm">Targeted macro solutions to clean data, build custom forms, connect external databases, and automate daily document generation.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1: Database Migration -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            🔄
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Database Migration</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Build and connect Excel front-end or Access front-end interfaces linking seamlessly with Excel, Access, or SQL Server back-end databases.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Excel / Access UI</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">SQL Server Backend</span>
+          </div>
+        </div>
+
+        <!-- Service 2: Data Consolidation & Cleaning -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            🧹
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Data Consolidation &amp; Cleaning</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Combine messy files, standardize inconsistent data formats, and merge dozens of separate department reports into a single organized master sheet.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Report Merging</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Format Cleaning</span>
+          </div>
+        </div>
+
+        <!-- Service 3: Automated PDF, Word, & Email -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            📄
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Automated PDF, Word &amp; Email Generation</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Automate script execution to pull data from Excel, generate client invoices, purchase orders, or proposals in Word/PDF, and dispatch them via Outlook.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">PDF Invoicing</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Outlook Automation</span>
+          </div>
+        </div>
+
+        <!-- Service 4: Custom UserForms & Data Entry -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            🖥️
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Custom UserForms &amp; Interfaces</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Design bespoke popup windows (UserForms) equipped with dynamic dropdown menus, checkboxes, and strict validation rules to eliminate manual input errors.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Custom UserForms</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Data Validation</span>
+          </div>
+        </div>
+
+        <!-- Service 5: Database & External API Integration -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            🔌
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Database &amp; External API Integration</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Connect Excel directly to external data sources—including SQL Server, Microsoft Access, or live web APIs—using ActiveX Data Objects (ADO) to read and write records.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">ADO / OLEDB</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Web API Queries</span>
+          </div>
+        </div>
+
+        <!-- Service 6: Legacy Macro Repair & Modernization -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 hover:border-sky-500/50 transition-all shadow-xl">
+          <div class="w-12 h-12 rounded-lg bg-sky-950 border border-sky-800/50 flex items-center justify-center text-sky-400 mb-5 text-xl font-bold">
+            🛠️
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Legacy Macro Repair &amp; Refactoring</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Debug, optimize speed, and modernize old or broken macro code inherited from past employees to bring reliability back to your business workbooks.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border/60">
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Debugging</span>
+            <span class="text-[11px] font-mono text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded">Code Optimization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Spec & Architecture -->
+  <section class="pt-10 pb-20 px-6 border-b border-brand-border bg-slate-950/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold text-white mb-4">VBA Engineering Standards</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Our automation scripts adhere to best software engineering practices, avoiding recorded macros in favor of structured, maintainable, and fast VBA code.
+        </p>
+        <ul class="space-y-3 text-sm text-slate-300 font-mono">
+          <li class="flex items-center gap-2"><span class="text-sky-400">✓</span> Explicit variable declarations (`Option Explicit`) and error handling</li>
+          <li class="flex items-center gap-2"><span class="text-sky-400">✓</span> Optimized execution (disabling ScreenUpdating and Calculation during processing)</li>
+          <li class="flex items-center gap-2"><span class="text-sky-400">✓</span> Parameterized SQL queries via ADO objects to prevent injection issues</li>
+        </ul>
+      </div>
+      <div class="md:w-1/2 bg-brand-card p-6 rounded-2xl border border-brand-border w-full font-mono text-xs">
+        <div class="flex items-center gap-2 mb-4 border-b border-brand-border pb-3">
+          <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+          <span class="text-slate-500 ml-2">vba-automation-spec.json</span>
+        </div>
+        <pre class="text-sky-300 overflow-x-auto"><code>{
+  <span class="text-slate-400">"service"</span>: <span class="text-emerald-400">"Custom VBA Automation & Systems Integration"</span>,
+  <span class="text-slate-400">"supported_hosts"</span>: [<span class="text-emerald-400">"Microsoft Excel"</span>, <span class="text-emerald-400">"Microsoft Access"</span>, <span class="text-emerald-400">"Word"</span>, <span class="text-emerald-400">"Outlook"</span>],
+  <span class="text-slate-400">"data_connectors"</span>: [<span class="text-emerald-400">"ADODB.Connection"</span>, <span class="text-emerald-400">"SQL Server Native Client"</span>, <span class="text-emerald-400">"MSREST"</span>],
+  <span class="text-slate-400">"capabilities"</span>: [
+    <span class="text-emerald-400">"Consolidation"</span>, <span class="text-emerald-400">"UserForms"</span>, <span class="text-emerald-400">"PDF Generation"</span>, 
+    <span class="text-emerald-400">"Email Dispatch"</span>, <span class="text-emerald-400">"Macro Refactoring"</span>
+  ]
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact Footer -->
+  <footer id="contact" class="pt-10 pb-20 px-6 bg-brand-bg text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Automate Your Office Workflows?</h2>
+      <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+        Let's discuss how custom VBA scripts and automated macro solutions can save your team hours of manual work every week.
+      </p>
+      <a href="/#contact" class="inline-flex items-center px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-sky-500/20">
+        Initiate Automation Discussion
+      </a>
+    </div>
+  
+    <div class="max-w-7xl mx-auto">
+      <div class="pt-12 border-t border-brand-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© <span id="current-year"></span> Momtaz U — DataCore Systems. All rights reserved.</p>
+        <p>Designed for High Reliability &amp; Zero Downtime.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
