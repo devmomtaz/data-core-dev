@@ -163,7 +163,6 @@
                 </div>
             </a>
             
-            <!--   <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">   -->
 			<nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-300">
 			
                 <a href="#about" class="hover:text-sky-400 transition-colors">Overview</a>
@@ -193,7 +192,6 @@
   </div>
 </div>
                 <a href="#portfolio" class="hover:text-sky-400 transition-colors">Portfolio</a>
-				<!--  <a href="review.html" class="hover:text-sky-400 transition-colors">Reviews</a>  -->
                 <a href="#blog" class="hover:text-sky-400 transition-colors">Blog</a>
                 <a href="#calculator" class="hover:text-sky-400 transition-colors">ROI</a>
                 <a href="#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
@@ -252,7 +250,6 @@
     </section>
 
     <!-- Skills & Technology Stack -->
-    <!--<section id="skills" class="py-20 px-6 border-b border-brand-border bg-slate-950/40">  -->
 	<section id="skills" class="pt-10 pb-20 px-6 border-b border-brand-border bg-slate-950/40">
 	
         <div class="max-w-7xl mx-auto">
@@ -426,7 +423,6 @@
 
 
     <!-- Portfolio Projects -->
-    
 	<section id="projects" class="pt-10 pb-20 px-6 border-b border-brand-border">
 	
         <div class="max-w-7xl mx-auto">
@@ -442,7 +438,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               
-			  
 	<!-- Project 1 -->
 <div class="bg-brand-card rounded-2xl border border-brand-border p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
     <div>
@@ -475,8 +470,6 @@
     </div>
 </div>
 
-	
-		
                 <!-- Project 2 -->
 <div class="bg-brand-card rounded-2xl border border-brand-border p-8 flex flex-col justify-between hover:border-slate-700 transition-all">
     <div>
@@ -513,7 +506,6 @@
     </section>
 
     <!-- Our Team Section -->
-    <!-- <section id="team" class="py-24 px-6 border-b border-brand-border bg-slate-950/40">   -->
 	<section id="team" class="pt-12 pb-24 px-6 border-b border-brand-border bg-slate-950/40">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -576,7 +568,6 @@
     </section>
 
     <!-- Portfolio Section -->
-    <!--<section id="portfolio" class="py-24 px-6 bg-slate-950/50 border-b border-brand-border">   -->
 	<section id="portfolio" class="pt-12 pb-24 px-6 bg-slate-950/50 border-b border-brand-border">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
@@ -754,314 +745,101 @@
         </div>
     </section>
 
-    
-	<!-- Technical Writing & Insights Section  blog post starts here sep 19 2026 -->
-
-<section id="blog" class="py-12 max-w-5xl mx-auto px-6">
-  <!-- Section Header & Controls -->
-  <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
-    <div>
-      <span class="text-xs font-mono text-sky-400 uppercase tracking-wider block mb-1">
-        Technical Writing &amp; Insights
-      </span>
-      <h2 class="text-2xl font-bold text-white">
-        Articles &amp; Engineering Publications
-      </h2>
-    </div>
-
-    <!-- Filter & Sort Controls -->
-    <div class="flex flex-wrap items-center gap-3">
-      <!-- Category Filter Dropdown -->
-      <div class="flex items-center gap-2">
-        <label for="blog-category-filter" class="text-xs font-mono text-slate-400">Category:</label>
-        <select id="blog-category-filter" onchange="filterAndSortBlogs()" class="bg-brand-card text-slate-200 text-xs font-mono border border-brand-border rounded-lg px-3 py-1.5 focus:outline-none focus:border-sky-500 cursor-pointer">
-          <option value="ALL">All Categories</option>
-          <!-- Options populated dynamically by JavaScript -->
-        </select>
-      </div>
-
-      <!-- Date Sort Order Dropdown -->
-      <div class="flex items-center gap-2">
-        <label for="blog-sort-order" class="text-xs font-mono text-slate-400">Sort:</label>
-        <select id="blog-sort-order" onchange="filterAndSortBlogs()" class="bg-brand-card text-slate-200 text-xs font-mono border border-brand-border rounded-lg px-3 py-1.5 focus:outline-none focus:border-sky-500 cursor-pointer">
-          <option value="NEWEST">Newest to Oldest</option>
-          <option value="OLDEST">Oldest to Newest</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
-  <!-- Responsive Table Container -->
-  <div class="overflow-x-auto bg-brand-card rounded-2xl border border-brand-border shadow-xl">
-    <table class="w-full text-left border-collapse">
-      <!-- Table Header -->
-      <thead>
-        <tr class="border-b border-brand-border text-xs font-mono uppercase tracking-wider text-slate-400 bg-slate-900/50">
-          <th scope="col" class="py-4 px-6 w-32">Date</th>
-          <th scope="col" class="py-4 px-6 w-52">Category</th>
-          <th scope="col" class="py-4 px-6">Subject / Title</th>
-          <th scope="col" class="py-4 px-6 text-right w-36">Action</th>
-        </tr>
-      </thead>
-      
-      <!-- Table Body -->
-      <tbody id="blog-table-body" class="divide-y divide-brand-border/60 text-sm">
-        <!-- Rendered via JavaScript -->
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- Blog Filtering & Sorting Engine -->
-
-<script>
-  const blogPosts = [
-  
-  {
-      id: 20,
-      date: "2026-09-22",
-      dateFormatted: "Sep 22, 2026",
-      category: "Software Architecture",
-      title: "Discover key techniques for optimizing MySQL query performance in high-traffic PHP applications.",
-      url: "/blogs/bg20"
-    },
-	
-      {
-      id: 19,
-      date: "2026-09-22",
-      dateFormatted: "Sep 22, 2026",
-      category: "Software Architecture",
-      title: "Web application development security checklist for corporate compliance, data audits, and hardening backend systems.",
-      url: "/blogs/bg19"
-    },
-	   
-    {
-      id: 18,
-      date: "2026-09-22",
-      dateFormatted: "Sep 22, 2026",
-      category: "Software Architecture",
-      title: "Learn how to build lightweight, real-time dashboards with instantaneous UI updates using MySQL and JavaScript.",
-      url: "/blogs/bg18"
-    },
-	
-  
-    {
-      id: 17,
-      date: "2026-09-22",
-      dateFormatted: "Sep 22, 2026",
-      category: "Software Architecture",
-      title: "Enterprise-Grade Web Architecture: Custom PHP, JavaScript & MySQL Solutions.",
-      url: "/blogs/bg17"
-    },
-	      
-    {
-      id: 16,
-      date: "2026-09-22",
-      dateFormatted: "Sep 22, 2026",
-      category: "Software Engineering",
-      title: "Is Python Django Good for Business Web Apps? (Pros, Cons & Verdict).",
-      url: "/blogs/bg16"
-    },
-	
-	{
-      id: 15,
-      date: "2026-09-14",
-      dateFormatted: "Sep 14, 2026",
-      category: "Database Architecture",
-      title: "High-Concurrency local-first web architecture: 193 files, 65 user page yet zero lag. See how.",
-      url: "/blogs/bg15"
-    },
-	
-    {
-      id: 14,
-      date: "2026-09-13",
-      dateFormatted: "Sep 13, 2026",
-      category: "Desktop Database & VBA",
-      title: "The Role of an Enterprise Web Application Architect in Database Modernization.",
-      url: "/blogs/bg14"
-    },
-    {
-      id: 13,
-      date: "2026-09-12",
-      dateFormatted: "Sep 12, 2026",
-      category: "Desktop Database & VBA",
-      title: "Why Migrating Legacy VBA Macros to Python Is Essential for Enterprise Scale.",
-      url: "/blogs/bg13"
-    },
-    {
-      id: 12,
-      date: "2026-09-10",
-      dateFormatted: "Sep 10, 2026",
-      category: "Database Architecture",
-      title: "Enterprise SQLite WASM Local-First Sync Architecture.",
-      url: "/blogs/bg12"
-    },
-    {
-      id: 11,
-      date: "2026-09-08",
-      dateFormatted: "Sep 8, 2026",
-      category: "Database Architecture",
-      title: "Why Hybrid Database Architecture Is the Smartest Modernization Strategy for 2026.",
-      url: "/blogs/bg11"
-    },
-    {
-      id: 10,
-      date: "2026-09-07",
-      dateFormatted: "Sep 7, 2026",
-      category: "Database Architecture",
-      title: "Why Companies Still Depend on Microsoft Access to Run Core Operations Despite the Rise of Cloud-based Platforms.",
-      url: "/blogs/bg10"
-    },
-    {
-      id: 9,
-      date: "2026-09-04",
-      dateFormatted: "Sep 4, 2026",
-      category: "Database Architecture",
-      title: "Write Conflicts in Microsoft Access Front-end & Solutions",
-      url: "/blogs/bg9"
-    },
-    {
-      id: 8,
-      date: "2026-09-02",
-      dateFormatted: "Sep 2, 2026",
-      category: "Database Architecture",
-      title: "Microsoft Access Front-end with SQL Server Back-end: Common Issues & Solutions",
-      url: "/blogs/bg8"
-    },
-    {
-      id: 7,
-      date: "2026-08-31",
-      dateFormatted: "Aug 31, 2026",
-      category: "Desktop Database & VBA",
-      title: "Advanced Automation Tricks for Developers of Access 365",
-      url: "/blogs/bg7"
-    },
-    {
-      id: 6,
-      date: "2026-08-26",
-      dateFormatted: "Aug 26, 2026",
-      category: "SOFTWARE ARCHITECTURE",
-      title: "SQL Server Migration Best Practices: Strategies for Transferring Legacy Data Structures into Modern Web Application",
-      url: "/blogs/bg6"
-    },
-    {
-      id: 5,
-      date: "2026-08-20",
-      dateFormatted: "Aug 20, 2026",
-      category: "SOFTWARE ARCHITECTURE",
-      title: "Local-First vs. Cloud-Only Architecture: Why keeping data local-first improves enterprise application speed and uptime",
-      url: "/blogs/bg5"
-    },
-    {
-      id: 4,
-      date: "2026-08-16",
-      dateFormatted: "Aug 16, 2026",
-      category: "SOFTWARE ENGINEERING",
-      title: "The 5 Phases of Our High-Reliability Web Application Development Process",
-      url: "/blogs/bg4"
-    },
-    {
-      id: 3,
-      date: "2026-08-10",
-      dateFormatted: "Aug 10, 2026",
-      category: "SOFTWARE ARCHITECTURE",
-      title: "Disadvantages of Off-the-Shelf Software",
-      url: "/blogs/bg3"
-    },
-    {
-      id: 2,
-      date: "2026-08-05",
-      dateFormatted: "Aug 5, 2026",
-      category: "CUSTOMIZED ACCESS 365",
-      title: "Access 365 Automation Engine for ISO 9001",
-      url: "/blogs/bg2"
-    },
-    {
-      id: 1,
-      date: "2026-07-31",
-      dateFormatted: "Jul 31, 2026",
-      category: "SOFTWARE ARCHITECTURE",
-      title: "Local-First Web Application by DataCore Systems",
-      url: "/blogs/bg1"
-    }
-  ];
-
-  function populateCategories() {
-    const categorySelect = document.getElementById("blog-category-filter");
-    const categories = Array.from(new Set(blogPosts.map(p => p.category.trim().toUpperCase())));
-    
-    categories.forEach(cat => {
-      const option = document.createElement("option");
-      option.value = cat;
-      option.textContent = cat;
-      categorySelect.appendChild(option);
-    });
-  }
-
-  function renderBlogTable(posts) {
-    const tbody = document.getElementById("blog-table-body");
-    if (!posts || posts.length === 0) {
-      tbody.innerHTML = `
-        <tr>
-          <td colspan="4" class="py-8 px-6 text-center text-slate-500 font-mono text-xs">
-            No articles found matching the selected category.
-          </td>
-        </tr>`;
-      return;
-    }
-
-    tbody.innerHTML = posts.map(post => `
-      <tr class="hover:bg-slate-800/40 transition-colors group">
-        <td class="py-4 px-6 font-mono text-slate-400 whitespace-nowrap text-xs">
-          ${post.dateFormatted}
-        </td>
-        <td class="py-4 px-6 whitespace-nowrap">
-          <span class="text-[10px] font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
-            ${post.category}
+    <!-- Technical Writing & Insights Section (Shortened Featured Layout) -->
+    <section id="blog" class="py-12 max-w-5xl mx-auto px-6">
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-mono text-sky-400 uppercase tracking-wider block mb-1">
+            Technical Writing &amp; Insights
           </span>
-        </td>
-        <td class="py-4 px-6 text-white font-medium group-hover:text-sky-300 transition-colors">
-          <a href="${post.url}" class="hover:text-sky-300 transition-colors">${post.title}</a>
-        </td>
-        <td class="py-4 px-6 text-right whitespace-nowrap">
-          <a href="${post.url}" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1.5 transition-colors">
-            Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
-          </a>
-        </td>
-      </tr>
-    `).join("");
-  }
+          <h2 class="text-2xl font-bold text-white">
+            Featured Publications
+          </h2>
+        </div>
 
-  function filterAndSortBlogs() {
-    const selectedCategory = document.getElementById("blog-category-filter").value;
-    const sortOrder = document.getElementById("blog-sort-order").value;
+        <div>
+       <a href="/blogs/bglist" class="px-5 py-2.5 bg-sky-600/20 hover:bg-sky-600/30 text-sky-400 border border-sky-500/30 hover:border-sky-500/60 rounded-xl transition-all text-sm font-mono font-semibold inline-flex items-center gap-2">
+  View All Publications <i class="fa-solid fa-arrow-right"></i>
+</a>
+        </div>
+      </div>
 
-    let filtered = [...blogPosts];
+      <!-- Featured 3 Recent Posts Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <!-- Article Last one -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between hover:border-sky-500/40 transition-all group">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[10px] font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
+                Software Architecture
+              </span>
+              <span class="text-xs font-mono text-slate-500">Sep 22, 2026</span>
+            </div>
+            <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition-colors leading-snug mb-3">
+              <a href="/blogs/bg20">Discover key techniques for optimizing MySQL query performance in high-traffic PHP applications.</a>
+            </h3>
+          </div>
+          <div class="pt-4 border-t border-brand-border/60">
+            <a href="/blogs/bg20" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1.5 transition-colors">
+              Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
 
-    if (selectedCategory !== "ALL") {
-      filtered = filtered.filter(post => post.category.trim().toUpperCase() === selectedCategory);
-    }
+        <!-- Article last but 2 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between hover:border-sky-500/40 transition-all group">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[10px] font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
+                Software Architecture
+              </span>
+              <span class="text-xs font-mono text-slate-500">Sep 22, 2026</span>
+            </div>
+            <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition-colors leading-snug mb-3">
+              <a href="/blogs/bg19">Web application development security checklist for corporate compliance, data audits, and hardening backend systems.</a>
+            </h3>
+          </div>
+          <div class="pt-4 border-t border-brand-border/60">
+            <a href="/blogs/bg19" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1.5 transition-colors">
+              Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
 
-    filtered.sort((a, b) => {
-      const dateA = new Date(a.date);
-      const dateB = new Date(b.date);
-      return sortOrder === "NEWEST" ? dateB - dateA : dateA - dateB;
-    });
+        <!-- Article last but 3 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between hover:border-sky-500/40 transition-all group">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[10px] font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
+                Software Architecture
+              </span>
+              <span class="text-xs font-mono text-slate-500">Sep 22, 2026</span>
+            </div>
+            <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition-colors leading-snug mb-3">
+              <a href="/blogs/bg18">Learn how to build lightweight, real-time dashboards with instantaneous UI updates using MySQL and JavaScript.</a>
+            </h3>
+          </div>
+          <div class="pt-4 border-t border-brand-border/60">
+            <a href="/blogs/bg18" class="text-xs font-mono text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1.5 transition-colors">
+              Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-    renderBlogTable(filtered);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    populateCategories();
-    filterAndSortBlogs();
-  });
-</script>	
-<!-- Technical Writing & Insights Section  blog post ENDS here sep 19 2026 -->
-	
+      <!-- Bottom CTA Banner -->
+      <div class="text-center pt-2">
+  <a href="/blogs/bglist" class="inline-flex items-center gap-2 text-xl font-semibold text-slate-300 hover:text-sky-400 transition-colors">
+    <span>Looking for the full article archive?</span>
+    <span class="text-sky-400 underline underline-offset-4">Browse All Publications &rarr;</span>
+  </a>
+</div>
+    </section>
+    <!-- Technical Writing & Insights Section ENDS -->
 	
 	
     <!-- Interactive ROI Calculator -->
-    <!-- <section id="calculator" class="py-20 px-6 border-b border-brand-border bg-slate-950/40">   -->
 	<section id="calculator" class="pt-10 pb-20 px-6 border-b border-brand-border bg-slate-950/40">
 	
         <div class="max-w-5xl mx-auto">
@@ -1098,7 +876,6 @@
     </section>
 
     <!-- Contact & Footer Section -->
-    <!-- <footer id="contact" class="py-20 px-6 border-t border-brand-border bg-brand-dark">   --> 
 	<footer id="contact" class="pt-10 pb-20 px-6 border-t border-brand-border bg-brand-dark">
 	
         <div class="max-w-7xl mx-auto">
