@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO 9001 Compliance Reporting System | Case Study - DataCore Systems</title>
+  <meta name="description" content="Case study on building an enterprise-grade ISO 9001 quality audit and compliance logging web application." />
+
+  <link rel="canonical" href="https://data-core.dev/cs/cs01" />
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="DataCore Systems" />
+  <meta property="og:url" content="https://data-core.dev/cs/cs01" />
+  <meta property="og:title" content="ISO 9001 Compliance Reporting System | Case Study - DataCore Systems" />
+  <meta property="og:description" content="Case study on building an enterprise-grade ISO 9001 quality audit and compliance logging web application." />
+  <meta property="og:image" content="https://data-core.dev/images/cs/cs01.png" />
+  <meta property="og:image:secure_url" content="https://data-core.dev/images/cs/cs01.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:author" content="Momtaz U" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://data-core.dev/cs/cs01" />
+  <meta name="twitter:title" content="ISO 9001 Compliance Reporting System | Case Study - DataCore Systems" />
+  <meta name="twitter:description" content="Case study on building an enterprise-grade ISO 9001 quality audit and compliance logging web application." />
+  <meta name="twitter:image" content="https://data-core.dev/images/cs/cs01.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#070b12',
+              card: '#0d131f',
+              border: '#1a2333'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+
+<body class="bg-brand-bg text-slate-300 antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-[#070b12]/95 backdrop-blur-md border-b border-brand-border py-4 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      
+      <a href="../index" class="group relative flex items-center gap-3 py-2">
+          <img src="../favicon-v2.png" alt="DataCore Systems Logo" class="w-10 h-10 object-contain drop-shadow-md">
+          <div>
+              <span class="text-xl font-bold text-white tracking-tight">DataCore <span class="text-[#16BEDC]">Systems</span></span>
+              <span class="text-[11px] font-sans font-semibold text-emerald-400 tracking-wider uppercase block -mt-0.5 opacity-90 hover:text-emerald-300 transition-colors">
+                  Enterprise Software &amp; Systems Architecture
+              </span>
+          </div>
+
+          <div class="hidden group-hover:block absolute top-full left-0 mt-2 z-50 w-64 p-4 bg-brand-card rounded-2xl border border-sky-500/50 shadow-2xl shadow-sky-500/10 backdrop-blur-lg transition-all duration-200">
+              <img src="../logo-v2.png" alt="DataCore Systems Full Logo" class="w-full h-auto object-contain mx-auto rounded-lg">
+          </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="../#about" class="hover:text-white transition-colors">Overview</a>
+        <a href="../#skills" class="hover:text-white transition-colors">Stack</a>
+        <a href="../#projects" class="hover:text-white transition-colors">Featured Systems</a>
+        <a href="../#team" class="hover:text-white transition-colors">Our Team</a>
+        
+        <div style="position: relative; display: inline-block;" 
+             onmouseenter="this.querySelector('.nav-dropdown-menu').style.display='block'" 
+             onmouseleave="this.querySelector('.nav-dropdown-menu').style.display='none'">
+          
+          <a href="../#services" class="text-slate-300 no-underline p-2 inline-block hover:text-sky-400 transition-colors">
+            Services ▾
+          </a>
+            
+          <div class="nav-dropdown-menu" 
+               style="display: none; position: absolute; top: 100%; left: 0; background-color: #0b1120; min-width: 220px; border: 1px solid #1e293b; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 9999; padding: 6px 0;">
+            <a href="../srvweb" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Web Application</a>
+            <a href="../srvloc" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Local-first Web Application</a>
+            <a href="../srvmob" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Mobile Application</a>
+            <a href="../srvdm" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Database Migration</a>
+            <a href="../srvdesk" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Desktop Software Engineering</a>
+            <a href="../srvvba" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Custom VBA Automation</a>
+          </div>
+        </div>	
+
+        <a href="../#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+        <a href="../#blog" class="hover:text-white transition-colors">Blog</a>
+        <a href="../#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 pt-4 pb-12 max-w-4xl mx-auto px-6">
+    
+    <!-- Back Link -->
+<a href="/cs/cslist" class="inline-flex items-center gap-2 text-sm font-mono text-white hover:text-slate-200 mb-8 transition-colors">
+  <i class="fa-solid fa-arrow-left"></i> Back to Case Studies List
+</a>
+
+    <!-- Header Block -->
+    <header class="mb-10 border-b border-brand-border pb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-xs font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
+          Supply Chain, Compliance &amp; Institutional Systems
+        </span>
+        <span class="text-xs font-mono text-slate-400">Sep 15, 2026</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+        Local-first Web Application for ISO 9001 Compliance Reporting
+      </h1>
+      <p class="text-lg text-slate-400">
+        Enterprise-grade quality audit and compliance logging web application designed for real-time audit trails and automated reporting.
+      </p>
+    </header>
+	
+	
+	<!-- Featured Dashboard Screenshot -->
+<div class="mb-10 overflow-hidden rounded-2xl border border-brand-border bg-brand-card p-2 shadow-2xl">
+  <img src="../images/cs/cs01.png" alt="ISO 9001 Compliance Web Application Dashboard" class="w-full h-auto rounded-xl object-cover">
+</div>
+
+<article class="space-y-8 text-slate-300 leading-relaxed">
+  <!-- Executive Summary below -->
+
+    <!-- Content Sections -->
+    <article class="space-y-8 text-slate-300 leading-relaxed">
+      
+      <!-- Executive Summary -->
+      <section class="bg-brand-card p-6 rounded-2xl border border-brand-border">
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-[#16BEDC] fa-circle-info text-sky-400"></i> Executive Summary
+        </h2>
+        <p>
+          Managing compliance across multi-site production facilities requires strict logging, non-conformance tracking, and audit readiness. This web application digitizes the entire ISO 9001 compliance lifecycle, reducing audit preparation overhead while eliminating paper-based logs.
+        </p>
+      </section>
+
+      <!-- The Challenge -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">The Challenge</h2>
+        <p class="mb-4">
+          Prior to implementation, quality control audits relied heavily on manual spreadsheets and decentralized paper forms. Key issues included:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-slate-400 pl-2">
+          <li>Lack of centralized audit trails across enterprise locations.</li>
+          <li>High risk of manual data entry errors and missing corrective action logs.</li>
+          <li>Delayed reporting for ISO quality management reviews.</li>
+        </ul>
+      </section>
+
+      <!-- Solution & Architecture -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Solution &amp; Technical Architecture</h2>
+        <p class="mb-4">
+          DataCore Systems architected a lightweight, secure web portal featuring normalized relational data structures and role-based access control.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1">Normalized Database</h3>
+            <p class="text-xs text-slate-400">Strictly structured MySQL schema enforcing foreign key integrity across audit trails and action plans.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1">Role-Based Access</h3>
+            <p class="text-xs text-slate-400">Granular permissions ensuring auditors, managers, and system administrators access only designated views.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Results -->
+      <section class="border-t border-brand-border pt-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Results &amp; Impact</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-sky-400 font-mono mb-1">100%</div>
+            <div class="text-xs text-slate-400">Audit Compliance Rate</div>
+          </div>
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-emerald-400 font-mono mb-1">70%</div>
+            <div class="text-xs text-slate-400">Faster Report Generation</div>
+          </div>
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-indigo-400 font-mono mb-1">Zero</div>
+            <div class="text-xs text-slate-400">Paper Dependency</div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500 font-mono">
+    &copy; <span id="current-year"></span> DataCore Systems. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
