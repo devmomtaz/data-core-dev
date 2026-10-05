@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
+ <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+	
+
  <!-- Page Title & Standard Meta Description -->
 <title>Fix MS Access & SQL Server Write Conflicts | DataCore Systems</title>
 <meta name="description" content="Resolve Write Conflict errors in Microsoft Access connected to SQL Server backends using timestamp fields and optimized queries.">
@@ -81,15 +89,19 @@
 
 <body class="bg-brand-bg text-slate-300 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header / Navigation -->
-    <header class="py-6 px-6 border-b border-brand-border">
-        <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="/blogs/bglist" class="text-white text-sm font-bold flex items-center gap-2 hover:text-emerald-400 transition-colors">
-                <i class="fa-solid fa-arrow-left"></i> Back to Blog List
-            </a>
-            <span class="text-xs font-mono text-slate-500">Published: Sep 04, 2026</span>
-        </div>
-    </header>
+<!-- Header Container for Dynamically Loaded header.html -->
+    <div id="header-container"></div>
+	
+ <!-- Page Context Bar (Back Link & Publish Date) -->
+<div class="py-4 px-6 border-b border-brand-border/60 bg-slate-900/40">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+        <a href="/blogs/bglist" class="text-white text-sm font-bold flex items-center gap-2 hover:text-sky-400 transition-colors">
+            <i class="fa-solid fa-arrow-left"></i> Back to Blog List
+        </a>
+        <span class="text-xs font-mono text-slate-500">Published: Sep 04, 2026</span>
+    </div>
+</div>	
+
 
     <!-- Main Content Container -->
     <main class="py-12 px-6 flex-1">
@@ -201,5 +213,9 @@
     <script>
         document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
+	
+		<script src="/lightbox.js"></script>
+	    <script src="/header-bg.js"></script>
+	
 </body>
 </html>
