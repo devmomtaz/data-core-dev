@@ -19,7 +19,7 @@
   <meta property="og:image:secure_url" content="https://data-core.dev/images/cs/cs01.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="article:author" content="Momtaz Uddin" />
+  <meta property="article:author" content="Momtaz U" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -63,56 +63,8 @@
 
 <body class="bg-brand-bg text-slate-300 antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- Header / Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-[#070b12]/95 backdrop-blur-md border-b border-brand-border py-4 px-6">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-      
-      <a href="../index" class="group relative flex items-center gap-3 py-2">
-          <img src="../favicon-v2.png" alt="DataCore Systems Logo" class="w-10 h-10 object-contain drop-shadow-md">
-          <div>
-              <span class="text-xl font-bold text-white tracking-tight">DataCore <span class="text-[#16BEDC]">Systems</span></span>
-              <span class="text-[11px] font-sans font-semibold text-emerald-400 tracking-wider uppercase block -mt-0.5 opacity-90 hover:text-emerald-300 transition-colors">
-                  Enterprise Software &amp; Systems Architecture
-              </span>
-          </div>
-
-          <div class="hidden group-hover:block absolute top-full left-0 mt-2 z-50 w-64 p-4 bg-brand-card rounded-2xl border border-sky-500/50 shadow-2xl shadow-sky-500/10 backdrop-blur-lg transition-all duration-200">
-              <img src="../logo-v2.png" alt="DataCore Systems Full Logo" class="w-full h-auto object-contain mx-auto rounded-lg">
-          </div>
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="../#about" class="hover:text-white transition-colors">Overview</a>
-        <a href="../#skills" class="hover:text-white transition-colors">Stack</a>
-        <a href="../#projects" class="hover:text-white transition-colors">Featured Systems</a>
-        <a href="../#team" class="hover:text-white transition-colors">Our Team</a>
-        
-        <div style="position: relative; display: inline-block;" 
-             onmouseenter="this.querySelector('.nav-dropdown-menu').style.display='block'" 
-             onmouseleave="this.querySelector('.nav-dropdown-menu').style.display='none'">
-          
-          <a href="../#services" class="text-slate-300 no-underline p-2 inline-block hover:text-sky-400 transition-colors">
-            Services ▾
-          </a>
-            
-          <div class="nav-dropdown-menu" 
-               style="display: none; position: absolute; top: 100%; left: 0; background-color: #0b1120; min-width: 220px; border: 1px solid #1e293b; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 9999; padding: 6px 0;">
-            <a href="../srvweb" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Web Application</a>
-            <a href="../srvloc" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Local-first Web Application</a>
-            <a href="../srvmob" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Mobile Application</a>
-            <a href="../srvdm" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Database Migration</a>
-            <a href="../srvdesk" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Desktop Software Engineering</a>
-            <a href="../srvvba" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Custom VBA Automation</a>
-          </div>
-        </div>	
-
-        <a href="../#portfolio" class="hover:text-white transition-colors">Portfolio</a>
-        <a href="../#blog" class="hover:text-white transition-colors">Blog</a>
-        <a href="../#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
-      </nav>
-
-    </div>
-  </header>
+<!-- Header Container for Dynamically Loaded header.html -->
+    <div id="header-container"></div>
 
   <!-- Main Content Container -->
   <main class="flex-1 pt-4 pb-12 max-w-4xl mx-auto px-6">
@@ -297,5 +249,11 @@
   <script>
     document.getElementById("current-year").textContent = new Date().getFullYear();
   </script>
+  <!-- View picture enlarged -->
+	<script src="/lightbox.js"></script>
+	
+	<!-- Load Global Navigation Header -->
+    <script src="/header-cs.js"></script>
+
 </body>
 </html>
