@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borrower's Balance Inquiry Mobile App in Flutter | Case Study - DataCore Systems</title>
+  <meta name="description" content="Case study on engineering a cross-platform Flutter mobile application (LoanCheck) for loan account balance inquiry, payment history, and customer support." />
+
+  <link rel="canonical" href="https://data-core.dev/cs/cs04" />
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="DataCore Systems" />
+  <meta property="og:url" content="https://data-core.dev/cs/cs04" />
+  <meta property="og:title" content="Borrower's Balance Inquiry Mobile App in Flutter | DataCore Systems" />
+  <meta property="og:description" content="Case study on engineering a cross-platform Flutter mobile application (LoanCheck) for loan account balance inquiry, payment history, and customer support." />
+  <meta property="og:image" content="https://data-core.dev/images/cs/cs04.png" />
+  <meta property="og:image:secure_url" content="https://data-core.dev/images/cs/cs04.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:author" content="Momtaz U" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://data-core.dev/cs/cs04" />
+  <meta name="twitter:title" content="Borrower's Balance Inquiry Mobile App in Flutter | DataCore Systems" />
+  <meta name="twitter:description" content="Case study on engineering a cross-platform Flutter mobile application (LoanCheck) for loan account balance inquiry, payment history, and customer support." />
+  <meta name="twitter:image" content="https://data-core.dev/images/cs/cs04.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#070b12',
+              card: '#0d131f',
+              border: '#1a2333'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+<body class="bg-brand-bg text-slate-300 antialiased min-h-screen flex flex-col justify-between">
+<!-- Header Container for Dynamically Loaded header.html -->
+    <div id="header-container"></div>
+
+
+  <!-- Main Content Container -->
+  <main class="flex-1 pt-4 pb-12 max-w-4xl mx-auto px-6">
+    
+    <!-- Back Link -->
+    <a href="/cs/cslist" class="inline-flex items-center gap-2 text-sm font-mono text-white hover:text-slate-200 mb-8 transition-colors">
+      <i class="fa-solid fa-arrow-left"></i> Back to Case Studies List
+    </a>
+
+    <!-- Header Block -->
+    <header class="mb-10 border-b border-brand-border pb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-xs font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
+           Flutter &amp; Mobile Application
+        </span>
+        <span class="text-xs font-mono text-slate-400">Sep 30, 2026</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+        Borrower's Balance Inquiry Mobile App (LoanCheck) in Flutter
+      </h1>
+      <p class="text-lg text-slate-400">
+        Cross-platform mobile application giving borrowers instant access to real-time account balances, payment schedules, transaction histories, and dedicated support.
+      </p>
+      <br>
+      <p class="text-sm text-slate-300">
+        <strong class="text-white font-semibold">Client Context:</strong> Custom-engineered for <strong class="text-white font-semibold">Brett Asset Finance</strong> (owned by <strong class="text-white font-semibold">Mr. Conor Brett</strong>). Originally commissioned via Guru by first manager <strong class="text-white font-semibold">Niall O'Niel</strong> in August 2015, DataCore Systems provided active development, operational enhancements, and continuous database support from 2015 through 2023, generating a total project value of <strong class="text-white font-semibold">$17,625 USD.</strong>
+      </p>
+    </header>
+	
+    <!-- Featured Mobile App Screenshot -->
+    <div class="mb-10 overflow-hidden rounded-2xl border border-brand-border bg-brand-card p-2 shadow-2xl">
+      <img src="../images/cs/cs04.png" alt="Borrower's Balance Inquiry Mobile App (LoanCheck) Home Page and Account Summary" class="w-full h-auto rounded-xl object-cover">
+    </div>
+
+    <!-- Content Sections -->
+    <article class="space-y-8 text-slate-300 leading-relaxed">
+      
+      <section class="bg-brand-card p-6 rounded-2xl border border-brand-border">
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-mobile-screen-button text-sky-400"></i> Executive Summary
+        </h2>
+        <p>
+          To enhance customer self-service and reduce call center workloads, DataCore Systems engineered <strong>LoanCheck</strong>—a mobile balance inquiry application built with Flutter. Linked with Brett Asset Finance's backend system, the app empowers clients to view up-to-date loan balances, verify recent payment receipts, check upcoming installment due dates, and communicate directly with support teams on mobile devices.
+        </p>
+      </section>
+
+      <!-- Verified Client Review Section -->
+      <section class="bg-brand-card border border-brand-border rounded-2xl p-6 shadow-xl relative">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-white">Niall O'Niel (Niall 4)</h3>
+            <p class="text-sm text-slate-400">First Manager, Brett Asset Finance</p>
+          </div>
+          <div class="flex items-center gap-1 text-amber-400 text-base">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        
+        <blockquote class="text-slate-200 italic text-base leading-relaxed border-l-2 border-sky-500 pl-4 my-4">
+          "Momtaz is not only a very competent developer but also and very knowledgeable gentleman when it comes to banking. His experience was key to the success of this project and pointed out a few ideas that greatly enhanced and added extra value to the system he designed and built for me. Excellent work."
+        </blockquote>
+
+        <div class="flex flex-wrap items-center justify-between text-sm sm:text-base font-mono text-slate-300 pt-4 border-t border-brand-border/80 gap-3">
+          <span>Verified Guru Job: <strong class="text-sky-400">#1149516</strong></span>
+          <span>Review Date: <span class="text-slate-200">Aug 15, 2016</span></span>
+        </div>
+      </section>
+
+      <!-- App Functions / Key Modules -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Core Application Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-list-check"></i> Home Page Dashboard
+            </h3>
+            <p class="text-xs text-slate-400">Intuitive main navigation hub granting quick access to Account Summary, Payment History, Contact Support, and secure user Sign Out.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-file-invoice-dollar"></i> Detailed Account Summary
+            </h3>
+            <p class="text-xs text-slate-400">Real-time ledger breakdown including Account Number, Borrower Name, Current Balance, Overdue Amount, Last Paid Date/Amount, and Next Installment Due details.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-clock-rotate-left"></i> Payment History
+            </h3>
+            <p class="text-xs text-slate-400">Comprehensive chronological log of historical repayments, payment methods, and transaction confirmation IDs.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-headset"></i> Contact Support &amp; Assistance
+            </h3>
+            <p class="text-xs text-slate-400">Direct channel for borrowers to submit account inquiries, request statement documents, or resolve billing discrepancies.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies & Architecture Section -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Technologies &amp; Architecture</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-brands fa-flutter text-sky-400 text-lg"></i> Flutter
+          </span>
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-solid fa-code text-blue-400 text-base"></i> Dart
+          </span>
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-solid fa-plug text-emerald-400 text-base"></i> RESTful APIs
+          </span>
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-solid fa-shield-halved text-amber-400 text-base"></i> Secure Authentication
+          </span>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Security &amp; Data Integration</h2>
+        <p class="text-slate-400 mb-4">
+          The app features end-to-end tokenized authentication to safeguard sensitive financial credentials. Data synchronization communicates securely with the client backend via encrypted REST APIs to ensure that loan balances and payment schedules are always updated accurately.
+        </p>
+      </section>
+
+      <section class="border-t border-brand-border pt-8">
+        <h2 class="text-2xl font-bold text-white mb-4">System Outcomes</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-sky-400 font-mono mb-1">24/7</div>
+            <div class="text-xs text-slate-400">Self-Service Access</div>
+          </div>
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-emerald-400 font-mono mb-1">-65%</div>
+            <div class="text-xs text-slate-400">Support Inquiry Calls</div>
+          </div>
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-indigo-400 font-mono mb-1">Real-time</div>
+            <div class="text-xs text-slate-400">Balance Sync</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Offered Section -->
+      <section class="bg-brand-card p-6 rounded-2xl border border-brand-border shadow-lg">
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-mobile-screen text-sky-400"></i> Mobile Application Services
+        </h2>
+        <p class="text-sm text-slate-300 mb-4">
+          DataCore Systems provides cross-platform and native mobile software engineering services:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-300">
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Cross-Platform App Development (Flutter / Dart)</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>RESTful API Integration &amp; Backend Sync</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Secure Enterprise Authentication &amp; OAuth</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Offline-First Data Caching &amp; Synchronization</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Custom UI/UX Design &amp; Responsive Dashboards</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>App Deployment &amp; Maintenance Support</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500 font-mono">
+    &copy; <span id="current-year"></span> DataCore Systems. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  
+  
+  <script>
+  // Open Lightbox with targeted image
+  function openLightbox(src, alt = '') {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    
+    lightboxImg.src = src;
+    lightboxCaption.textContent = alt || 'System Screenshot View';
+    
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent page scrolling behind modal
+  }
+
+  // Close Lightbox
+  function closeLightbox() {
+    const lightbox = document.getElementById('imageLightbox');
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restore page scrolling
+  }
+
+  // Automatically attach click handlers & zoom cursors to content images
+  document.addEventListener('DOMContentLoaded', () => {
+    // Selects images in main content sections or images with class "clickable-img"
+    const articleImages = document.querySelectorAll('article img, .lightbox-gallery img, img.clickable-img');
+    
+    articleImages.forEach(img => {
+      img.classList.add('cursor-zoom-in', 'transition-transform', 'hover:scale-[1.01]');
+      img.addEventListener('click', () => {
+        openLightbox(img.src, img.alt);
+      });
+    });
+
+    // Close on Background Click
+    const lightbox = document.getElementById('imageLightbox');
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close on Escape Key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  });
+</script>
+
+<!-- Image Lightbox Modal -->
+<div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300">
+  <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+    
+    <!-- Close Button -->
+    <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-slate-400 hover:text-white text-2xl font-mono focus:outline-none">
+      <i class="fa-solid fa-xmark"></i> Close [ESC]
+    </button>
+    
+    <!-- Expanded Image Container -->
+    <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-[85vh] max-w-full rounded-2xl border border-brand-border shadow-2xl object-contain">
+    
+    <!-- Image Caption -->
+    <p id="lightboxCaption" class="text-xs font-mono text-slate-400 mt-3 text-center"></p>
+  </div>
+</div>
+
+<!-- View picture enlarged -->
+	<script src="/lightbox.js"></script>
+	
+	<!-- Load Global Navigation Header -->
+    <script src="/header-cs.js"></script>
+
+
+</body>
+</html>
