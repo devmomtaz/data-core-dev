@@ -61,57 +61,9 @@
   </style>
 </head>
 <body class="bg-brand-bg text-slate-300 antialiased min-h-screen flex flex-col justify-between">
+<!-- Header Container for Dynamically Loaded header.html -->
+    <div id="header-container"></div>
 
-  <!-- Header / Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-[#070b12]/95 backdrop-blur-md border-b border-brand-border py-4 px-6">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
-      
-      <a href="../index" class="group relative flex items-center gap-3 py-2">
-          <img src="../favicon-v2.png" alt="DataCore Systems Logo" class="w-10 h-10 object-contain drop-shadow-md">
-          <div>
-              <span class="text-xl font-bold text-white tracking-tight">DataCore <span class="text-[#16BEDC]">Systems</span></span>
-              <span class="text-[11px] font-sans font-semibold text-emerald-400 tracking-wider uppercase block -mt-0.5 opacity-90 hover:text-emerald-300 transition-colors">
-                  Enterprise Software &amp; Systems Architecture
-              </span>
-          </div>
-
-          <div class="hidden group-hover:block absolute top-full left-0 mt-2 z-50 w-64 p-4 bg-brand-card rounded-2xl border border-sky-500/50 shadow-2xl shadow-sky-500/10 backdrop-blur-lg transition-all duration-200">
-              <img src="../logo-v2.png" alt="DataCore Systems Full Logo" class="w-full h-auto object-contain mx-auto rounded-lg">
-          </div>
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="../#about" class="hover:text-white transition-colors">Overview</a>
-        <a href="../#skills" class="hover:text-white transition-colors">Stack</a>
-        <a href="../#projects" class="hover:text-white transition-colors">Featured Systems</a>
-        <a href="../#team" class="hover:text-white transition-colors">Our Team</a>
-        
-        <div style="position: relative; display: inline-block;" 
-             onmouseenter="this.querySelector('.nav-dropdown-menu').style.display='block'" 
-             onmouseleave="this.querySelector('.nav-dropdown-menu').style.display='none'">
-          
-          <a href="../#services" class="text-slate-300 no-underline p-2 inline-block hover:text-sky-400 transition-colors">
-            Services ▾
-          </a>
-            
-          <div class="nav-dropdown-menu" 
-               style="display: none; position: absolute; top: 100%; left: 0; background-color: #0b1120; min-width: 220px; border: 1px solid #1e293b; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); z-index: 9999; padding: 6px 0;">
-            <a href="../srvweb" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Web Application</a>
-            <a href="../srvloc" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Local-first Web Application</a>
-            <a href="../srvmob" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Mobile Application</a>
-            <a href="../srvdm" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Database Migration</a>
-            <a href="../srvdesk" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Desktop Software Engineering</a>
-            <a href="../srvvba" style="display: block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; white-space: nowrap; font-size: 14px;" onmouseover="this.style.color='#38bdf8'; this.style.backgroundColor='#1e293b'" onmouseout="this.style.color='#cbd5e1'; this.style.backgroundColor='transparent'">Custom VBA Automation</a>
-          </div>
-        </div>	
-
-        <a href="../#portfolio" class="hover:text-white transition-colors">Portfolio</a>
-        <a href="../#blog" class="hover:text-white transition-colors">Blog</a>
-        <a href="../#contact" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg transition-all shadow-md shadow-sky-600/20 font-semibold">Contact Me</a>
-      </nav>
-
-    </div>
-  </header>
 
   <!-- Main Content Container -->
   <main class="flex-1 pt-4 pb-12 max-w-4xl mx-auto px-6">
@@ -135,10 +87,11 @@
       <p class="text-lg text-slate-400">
         Automated interest calculation engine, deposit tracking, and loan schedule management suite built in Microsoft Access database for financial stability and precision. 
       </p>
+<br>
+      <p class="text-sm text-slate-300">
+  <strong class="text-white font-semibold">Client Context:</strong> Custom-engineered for <strong class="text-white font-semibold">Brett Asset Finance</strong> (owned by <strong class="text-white font-semibold">Mr. Conor Brett</strong>). Originally commissioned via Guru by first manager <strong class="text-white font-semibold">Niall O'Niel</strong> in August 2015, DataCore Systems provided active development, operational enhancements, and continuous database support from 2015 through 2023, generating a total project value of <strong class="text-white font-semibold">$17,625 USD.</strong>
+</p>
 
-      <p class="mt-4 text-slate-400 text-sm leading-relaxed border-l-2 border-sky-500 pl-4 bg-brand-card/50 py-2.5 rounded-r-lg">
-        <strong class="text-slate-200">Client Context:</strong> Custom-engineered for <strong class="text-slate-200">Brett Asset Finance</strong> (owned by <strong class="text-slate-200">Mr. Conor Brett</strong>). Originally commissioned via Guru in June 2015 and delivered by late 2015, DataCore Systems provided active maintenance, operational enhancements, and system support through 2023 when the firm pivoted to a new line of business.
-      </p>
     </header>
 	
     <!-- Featured Dashboard Screenshot -->
@@ -156,6 +109,32 @@
         <p>
           Financial institutions demand zero-tolerance accuracy in compounding interest calculations, payment schedules, and ledger reconciliation. DataCore Systems engineered this financial engine in Microsoft Access database to process daily accruals and manage complex loan portfolios. We initially developed this banking system in 2015 in Microsoft Access 2010 and later upgraded it to Office 365.
         </p>
+      </section>
+
+      <!-- Verified Client Review Section -->
+      <section class="bg-brand-card border border-brand-border rounded-2xl p-6 shadow-xl relative">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-white">Niall O'Niel (Niall 4)</h3>
+            <p class="text-sm text-slate-400">First Manager, Brett Asset Finance</p>
+          </div>
+          <div class="flex items-center gap-1 text-amber-400 text-base">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        
+        <blockquote class="text-slate-200 italic text-base leading-relaxed border-l-2 border-sky-500 pl-4 my-4">
+          "Momtaz is very communicative, very helpful, and highly skilled. He has completed our lending management database successfully. Will recommend him to all."
+        </blockquote>
+
+        <div class="flex flex-wrap items-center justify-between text-sm sm:text-base font-mono text-slate-300 pt-4 border-t border-brand-border/80 gap-3">
+          <span>Verified Guru Job: <strong class="text-sky-400">#1149516</strong></span>
+          <span>Review Date: <span class="text-slate-200">Jan 25, 2016</span></span>
+        </div>
       </section>
 
       <section>
@@ -216,6 +195,66 @@
         </div>
       </section>
 
+      <!-- Services Offered Section -->
+      <section class="bg-brand-card p-6 rounded-2xl border border-brand-border shadow-lg">
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-gears text-sky-400"></i> Microsoft Access Database Services
+        </h2>
+        <p class="text-sm text-slate-300 mb-4">
+          DataCore Systems provides the following Microsoft Access database services since 2005:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-300">
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>MS Access front-end with MS Access backend</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>MS Access front-end with SQL Server backend</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>MS Access front-end with MySQL backend</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>MS Access front-end with Excel backend</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>SQL Server &amp; Cloud Database Migration (Upsizing)</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Access-to-Web &amp; Local-First Web App Porting</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Upgrade database to the latest version</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Troubleshoot &amp; repair corrupted databases</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Query &amp; Performance Optimization</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Multi-User Network Setup &amp; Security (LAN/VPN)</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>API &amp; Third-Party System Integrations</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Add new features to your existing database</span>
+          </li>
+        </ul>
+      </section>
+
     </article>
 
   </main>
@@ -228,5 +267,11 @@
   <script>
     document.getElementById("current-year").textContent = new Date().getFullYear();
   </script>
+  <!-- View picture enlarged -->
+	<script src="/lightbox.js"></script>
+	
+	<!-- Load Global Navigation Header -->
+    <script src="/header-cs.js"></script>
+
 </body>
 </html>
