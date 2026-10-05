@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Case Studies & Delivered Systems | DataCore Systems</title>
+  <meta name="description" content="Explore real-world case studies, enterprise web applications, local-first architectures, and database modernization projects delivered by DataCore Systems." />
+
+  <link rel="canonical" href="https://data-core.dev/cs/cslist" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Theme Config matching DataCore Systems styling -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#070b12',
+              card: '#0d131f',
+              border: '#1a2333'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+
+<body class="bg-brand-bg text-slate-300 antialiased min-h-screen flex flex-col justify-between">
+
+<!-- Header Container for Dynamically Loaded header.html -->
+    <div id="header-container"></div>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 pt-2 pb-12">
+
+    <section id="case-studies" class="py-12 max-w-5xl mx-auto px-6">
+      <!-- Section Header & Category Filter Control -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-mono text-sky-400 uppercase tracking-wider block mb-1">
+            Commercial Proof &amp; Proven Track Record
+          </span>
+          <h2 class="text-2xl font-bold text-white">
+            Enterprise Case Studies &amp; Solved Use Cases
+          </h2>
+        </div>
+
+        <!-- Filter Control Only -->
+        <div class="flex items-center gap-2">
+          <label for="cs-category-filter" class="text-xs font-mono text-slate-400">Category:</label>
+          <select id="cs-category-filter" onchange="filterCaseStudies()" class="bg-brand-card text-slate-200 text-xs font-mono border border-brand-border rounded-lg px-3 py-1.5 focus:outline-none focus:border-sky-500 cursor-pointer max-w-xs truncate">
+            <option value="ALL">All Categories</option>
+            <!-- Populated with your 7 Keyword-Rich Categories -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Responsive Table Container -->
+      <div class="overflow-x-auto bg-brand-card rounded-2xl border border-brand-border shadow-xl">
+        <table class="w-full text-left border-collapse">
+          <!-- Table Header -->
+          <thead>
+            <tr class="border-b border-brand-border text-xs font-mono uppercase tracking-wider text-slate-400 bg-slate-900/50">
+              <th scope="col" class="py-4 px-6 w-32">Date</th>
+              <th scope="col" class="py-4 px-6 w-64">Category</th>
+              <th scope="col" class="py-4 px-6">System / Use Case Title</th>
+              <th scope="col" class="py-4 px-6 text-right w-36">Action</th>
+            </tr>
+          </thead>
+          
+          <!-- Table Body -->
+          <tbody id="cs-table-body" class="divide-y divide-brand-border/60 text-sm">
+            <!-- Rendered via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Total Case Studies Count Display -->
+      <div class="flex justify-end mt-4 px-2">
+        <div class="text-base sm:text-lg font-semibold text-slate-200 tracking-wide">
+          Total: <span id="cs-count-display" class="text-white font-bold">0</span> Case Studies
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500 font-mono">
+    &copy; <span id="current-year"></span> DataCore Systems. All rights reserved.
+  </footer>
+
+  <!-- Case Studies Filtering Engine -->
+  <script>
+    // Explicit list of your 7 keyword-based long-tail category names
+    const csCategories = [
+      "Enterprise ERP, Web Applications & Financial Systems",
+      "Legacy Database Migration to Web Applications",
+      "Offline & Local-First Web Applications",
+      "Python Desktop Applications & Database Analytics",
+      "Cross-Platform Mobile Applications",
+	  "Microsoft Access 365 & SQL Server Database Apps",
+      "Microsoft Office Automation & Custom VBA Engineering",
+      "Supply Chain, Compliance & Institutional Systems"
+    ];
+
+    // Array containing your initial case studies mapped to their categories
+    const caseStudies = [
+	
+	{
+        id: 4,
+        date: "2026-09-30",
+        dateFormatted: "Sep 30, 2026",
+        category: "Cross-Platform Mobile Applications",
+        title: "Engineered a Cross-Platform Mobile Application in Flutter for Borrower Balance Inquiry & Account Statement.",
+        url: "/cs/cs04"
+      },
+	  	
+     	  {
+        id: 3,
+        date: "2026-09-25",
+        dateFormatted: "Sep 25, 2026",
+        category: "Microsoft Access 365 & SQL Server Database Apps",
+        title: "Non-Banking Financial Institutions Deposit & Loan System: Banking database in Microsoft Access.",
+        url: "/cs/cs03"
+      	  },
+      {
+        id: 2,
+        date: "2026-09-20",
+        dateFormatted: "Sep 20, 2026",
+        category: "Legacy Database Migration to Web Applications",
+        title: "Excel to Web Application: Transforming legacy file-based databases into secure MySQL web systems.",
+        url: "/cs/cs02"
+      },
+      
+	  {
+        id: 1,
+        date: "2026-09-15",
+        dateFormatted: "Sep 15, 2026",
+        category: "Supply Chain, Compliance & Institutional Systems",
+        title: "Local-first web application for ISO 9001 Compliance Reporting System: Enterprise-grade quality audit and compliance web system.",
+        url: "/cs/cs01"
+      	  }
+	  ];
+
+    function populateCategories() {
+      const categorySelect = document.getElementById("cs-category-filter");
+      
+      csCategories.forEach(cat => {
+        const option = document.createElement("option");
+        option.value = cat;
+        option.textContent = cat;
+        categorySelect.appendChild(option);
+      });
+    }
+
+    function renderCaseStudyTable(items) {
+      const tbody = document.getElementById("cs-table-body");
+      const countDisplay = document.getElementById("cs-count-display");
+
+      if (countDisplay) {
+        countDisplay.textContent = items ? items.length : 0;
+      }
+
+      if (!items || items.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="4" class="py-8 px-6 text-center text-slate-500 font-mono text-xs">
+              No case studies found matching the selected category.
+            </td>
+          </tr>`;
+        return;
+      }
+
+      tbody.innerHTML = items.map(item => `
+        <tr class="hover:bg-slate-800/40 transition-colors group">
+          <td class="py-4 px-6 font-mono text-slate-400 whitespace-nowrap text-xs">
+            ${item.dateFormatted}
+          </td>
+          <td class="py-4 px-6 whitespace-nowrap">
+            <span class="text-[10px] font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider block max-w-[240px] truncate" title="${item.category}">
+              ${item.category}
+            </span>
+          </td>
+          <td class="py-4 px-6 text-white font-medium group-hover:text-sky-300 transition-colors">
+            <a href="${item.url}" class="hover:text-sky-300 transition-colors">${item.title}</a>
+          </td>
+          <td class="py-4 px-6 text-right whitespace-nowrap">
+            <a href="${item.url}" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1.5 transition-colors">
+              View Case Study <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function filterCaseStudies() {
+      const selectedCategory = document.getElementById("cs-category-filter").value;
+
+      let filtered = [...caseStudies];
+
+      if (selectedCategory !== "ALL") {
+        filtered = filtered.filter(item => item.category === selectedCategory);
+      }
+
+      renderCaseStudyTable(filtered);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      populateCategories();
+      filterCaseStudies();
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    });
+  </script>
+  
+  	<!-- Load Global Navigation Header -->
+    <script src="/header-cs.js"></script>
+
+</body>
+</html>
