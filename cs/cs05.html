@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel to Word Automated Financial Reports with VBA | Case Study - DataCore Systems</title>
+  <meta name="description" content="Case study on automating 23 financial advice report templates from 57 Excel sheets using 15,000 lines of robust VBA macro code." />
+
+  <link rel="canonical" href="https://data-core.dev/cs/cs05" />
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="DataCore Systems" />
+  <meta property="og:url" content="https://data-core.dev/cs/cs05" />
+  <meta property="og:title" content="Excel to Word Automated Financial Reports with VBA | DataCore Systems" />
+  <meta property="og:description" content="Case study on automating 23 financial advice report templates from 57 Excel sheets using 15,000 lines of robust VBA macro code." />
+  <meta property="og:image" content="https://data-core.dev/images/cs/cs05.png" />
+  <meta property="og:image:secure_url" content="https://data-core.dev/images/cs/cs05.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:author" content="Momtaz U" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://data-core.dev/cs/cs05" />
+  <meta name="twitter:title" content="Excel to Word Automated Financial Reports with VBA | DataCore Systems" />
+  <meta name="twitter:description" content="Case study on automating 23 financial advice report templates from 57 Excel sheets using 15,000 lines of robust VBA macro code." />
+  <meta name="twitter:image" content="https://data-core.dev/images/cs/cs05.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../favicons-32.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"> 
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#070b12',
+              card: '#0d131f',
+              border: '#1a2333'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+<body class="bg-brand-bg text-slate-300 antialiased min-h-screen flex flex-col justify-between">
+  <!-- Header Container for Dynamically Loaded header.html -->
+  <div id="header-container"></div>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 pt-4 pb-12 max-w-4xl mx-auto px-6">
+    
+    <!-- Back Link -->
+    <a href="/cs/cslist" class="inline-flex items-center gap-2 text-sm font-mono text-white hover:text-slate-200 mb-8 transition-colors">
+      <i class="fa-solid fa-arrow-left"></i> Back to Case Studies List
+    </a>
+
+    <!-- Header Block -->
+    <header class="mb-10 border-b border-brand-border pb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-xs font-mono font-semibold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-2.5 py-0.5 rounded uppercase tracking-wider">
+           Excel &amp; Word VBA Automation
+        </span>
+        <span class="text-xs font-mono text-slate-400">Sep 30, 2026</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+        Excel to Word Automated Reporting Suite for Templetons Financial
+      </h1>
+      <p class="text-lg text-slate-400">
+        Enterprise-grade macro automation system transforming client advisory data across 57 master Excel worksheets into 23 dynamic Word report templates using 15,000+ lines of custom VBA.
+      </p>
+      <br>
+      <p class="text-sm text-slate-300">
+        <strong class="text-white font-semibold">Client Context:</strong> Custom-engineered for <strong class="text-white font-semibold">Templetons Financial</strong> (owned by <strong class="text-white font-semibold">Mr. Anthony Jones</strong>, Brisbane, QLD, Australia). Originally commissioned via Guru under Job ID #1081408 in March 2019, DataCore Systems delivered continuous direct automation engineering from 2019 through 2023, generating a total project value of <strong class="text-white font-semibold">$23,500 USD</strong>.
+      </p>
+    </header>
+	
+    <!-- Featured Image Screenshot -->
+    <div class="mb-10 overflow-hidden rounded-2xl border border-brand-border bg-brand-card p-2 shadow-2xl">
+      <img src="../images/cs/cs05.png" alt="Templetons Financial Adviser Data Entry Tabs and Report Production Control Panel" class="w-full h-auto rounded-xl object-cover">
+    </div>
+
+    <!-- Content Sections -->
+    <article class="space-y-8 text-slate-300 leading-relaxed">
+      
+      <section class="bg-brand-card p-6 rounded-2xl border border-brand-border">
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-gears text-sky-400"></i> Executive Summary
+        </h2>
+        <p>
+          Templetons Financial, an established advisory firm based in Brisbane, Australia, provides client guidance on investment portfolios, retirement planning, insurance, and mortgage loans. Staff advisors previously spent dozens of administrative hours copying data manually into Microsoft Word document templates. DataCore Systems engineered a multi-tiered document generation suite using COM automation between Excel and Word VBA. The solution automated 23 custom Word document template reports driven by 57 master worksheets, eliminating repetitive transcription and saving hundreds of hours of staff time.
+        </p>
+      </section>
+
+      <!-- Verified Client Review Section -->
+      <section class="bg-brand-card border border-brand-border rounded-2xl p-6 shadow-xl relative">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-white">Anthony Jones (Anthony 571)</h3>
+            <p class="text-sm text-slate-400">Principal, Templetons Financial (Brisbane, QLD, Australia)</p>
+          </div>
+          <div class="flex items-center gap-1 text-amber-400 text-base">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        
+        <blockquote class="text-slate-200 italic text-base leading-relaxed border-l-2 border-sky-500 pl-4 my-4">
+          "Momtaz has gone over and beyond to finish this project for us and as a result we will save hundreds of hours of staff time in the future. We will definitely be getting more work done by Momtaz to make our business more efficient."
+        </blockquote>
+
+        <div class="flex flex-wrap items-center justify-between text-sm sm:text-base font-mono text-slate-300 pt-4 border-t border-brand-border/80 gap-3">
+          <span>Verified Guru Job: <strong class="text-sky-400">#1081408</strong></span>
+          <span>Review Date: <span class="text-slate-200">Mar 24, 2019</span></span>
+        </div>
+      </section>
+
+      <!-- System Architecture & Features -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Core Application Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-sliders"></i> Master Macro Dashboard UI
+            </h3>
+            <p class="text-xs text-slate-400">Structured control panel categorizing Adviser Data Entry tabs (Personal Details, Assets &amp; Liabilities, Income &amp; Expenses, Insurance) from Report Production triggers.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-file-word"></i> Dynamic Word Report Generation
+            </h3>
+            <p class="text-xs text-slate-400">COM automation injecting client variables, dynamic financial tables, and tailored text blocks into 23 Word documents (INA Docs, Fact Finds, Agendas, File Notes).</p>
+          </div>
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-database"></i> Modular Code Base (33 Modules)
+            </h3>
+            <p class="text-xs text-slate-400">Over 15,000 lines of highly optimized VBA code partitioned into 33 reusable modules to handle bookmark injection, table formatting, and error handling.</p>
+          </div>
+          <div class="bg-slate-900/60 border border-brand-border p-4 rounded-xl">
+            <h3 class="text-sm font-mono font-semibold text-sky-400 mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-box-archive"></i> Import &amp; Export Data Utilities
+            </h3>
+            <p class="text-xs text-slate-400">Custom macro routines for exporting client profile datasets to external repositories and re-importing profiles back into master sheets seamless updating.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies & Architecture Section -->
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Technologies &amp; Architecture</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-file-excel text-emerald-400 text-lg"></i> Microsoft Excel VBA
+          </span>
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-file-word text-blue-400 text-base"></i> Microsoft Word VBA
+          </span>
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-solid fa-diagram-project text-amber-400 text-base"></i> Dynamic COM Automation
+          </span>
+          <span class="inline-flex items-center gap-2 bg-brand-card border border-brand-border text-slate-200 font-mono text-sm px-4 py-2 rounded-xl shadow-sm hover:border-sky-500/50 transition-colors">
+            <i class="fa-solid fa-code text-purple-400 text-base"></i> Modular Architecture
+          </span>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-4">Technical Clauses &amp; System Integration</h2>
+        <p class="text-slate-400 mb-4">
+          The core solution relies on programmatic OLE/COM late-binding and early-binding object referencing between Excel and Word. Data binding uses deterministic bookmark manipulation and range objects to stream client data seamlessly without corrupting target document formatting. Standardized error handling routines capture runtime anomalies, restore screen updating, and preserve document state during large-scale document assembly tasks.
+        </p>
+      </section>
+
+      <section class="border-t border-brand-border pt-8">
+        <h2 class="text-2xl font-bold text-white mb-4">System Outcomes</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-sky-400 font-mono mb-1">57</div>
+            <div class="text-xs text-slate-400">Master Sheets</div>
+          </div>
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-emerald-400 font-mono mb-1">23</div>
+            <div class="text-xs text-slate-400">Word Reports</div>
+          </div>
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-amber-400 font-mono mb-1">15k+</div>
+            <div class="text-xs text-slate-400">Lines of VBA</div>
+          </div>
+          <div class="bg-brand-card p-4 rounded-xl border border-brand-border">
+            <div class="text-3xl font-bold text-indigo-400 font-mono mb-1">100s</div>
+            <div class="text-xs text-slate-400">Staff Hours Saved</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Offered Section -->
+      <section class="bg-brand-card p-6 rounded-2xl border border-brand-border shadow-lg">
+        <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-wand-magic-sparkles text-sky-400"></i> VBA &amp; Office Automation Services
+        </h2>
+        <p class="text-sm text-slate-300 mb-4">
+          DataCore Systems delivers end-to-end Microsoft Office automation, custom VBA software architecture, and cross-application integration:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-300">
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Automated Document Assembly (Excel to Word / PDF)</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Custom Excel Workbook Development &amp; Macro Engineering</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Cross-Application Integration via OLE / COM Automation</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Data Normalization, Scrubbing &amp; Automated Validation</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Custom UserForms &amp; Interactive Macro Dashboards</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-check text-sky-400 mt-1 text-xs"></i>
+            <span>Legacy VBA Refactoring, Optimization &amp; Maintenance</span>
+          </li>
+        </ul>
+      </section>
+
+<!-- Call to Action Banner -->
+      <section class="w-full bg-gradient-to-r from-sky-950/40 via-brand-card to-brand-card p-6 rounded-2xl border border-sky-800/40 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+        <div class="text-center sm:text-left">
+          <h3 class="text-lg font-bold text-white mb-1">Need Enterprise Document Automation?</h3>
+          <p class="text-slate-400 text-xs">Transform tedious manual reporting into seamless, automated multi-document generation engines.</p>
+        </div>
+        <a href="/#contact" class="bg-sky-500 hover:bg-sky-400 text-white font-semibold px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap text-xs shadow-md">
+          Discuss Your Project
+        </a>
+      </section>
+	  
+    </article>
+
+  </main>
+  
+  
+ 
+  <!-- Footer -->
+  <footer class="py-6 px-6 border-t border-brand-border text-center text-xs text-slate-500 font-mono">
+    &copy; <span id="current-year"></span> DataCore Systems. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+  
+  <script>
+  // Open Lightbox with targeted image
+  function openLightbox(src, alt = '') {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    
+    lightboxImg.src = src;
+    lightboxCaption.textContent = alt || 'System Screenshot View';
+    
+    lightbox.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent page scrolling behind modal
+  }
+
+  // Close Lightbox
+  function closeLightbox() {
+    const lightbox = document.getElementById('imageLightbox');
+    lightbox.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restore page scrolling
+  }
+
+  // Automatically attach click handlers & zoom cursors to content images
+  document.addEventListener('DOMContentLoaded', () => {
+    // Selects images in main content sections or images with class "clickable-img"
+    const articleImages = document.querySelectorAll('article img, .lightbox-gallery img, img.clickable-img');
+    
+    articleImages.forEach(img => {
+      img.classList.add('cursor-zoom-in', 'transition-transform', 'hover:scale-[1.01]');
+      img.addEventListener('click', () => {
+        openLightbox(img.src, img.alt);
+      });
+    });
+
+    // Close on Background Click
+    const lightbox = document.getElementById('imageLightbox');
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close on Escape Key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  });
+</script>
+
+<!-- Image Lightbox Modal -->
+<div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300">
+  <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+    
+    <!-- Close Button -->
+    <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-slate-400 hover:text-white text-2xl font-mono focus:outline-none">
+      <i class="fa-solid fa-xmark"></i> Close [ESC]
+    </button>
+    
+    <!-- Expanded Image Container -->
+    <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-[85vh] max-w-full rounded-2xl border border-brand-border shadow-2xl object-contain">
+    
+    <!-- Image Caption -->
+    <p id="lightboxCaption" class="text-xs font-mono text-slate-400 mt-3 text-center"></p>
+  </div>
+</div>
+
+<!-- View picture enlarged -->
+<script src="/lightbox.js"></script>
+
+<!-- Load Global Navigation Header -->
+<script src="/header-cs.js"></script>
+
+</body>
+</html>
